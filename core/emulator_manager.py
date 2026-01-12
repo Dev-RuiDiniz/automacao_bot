@@ -1,6 +1,7 @@
 import subprocess
 import os
 from core.config_manager import ConfigManager
+import time
 
 class EmulatorManager:
     def __init__(self):
@@ -52,10 +53,39 @@ class EmulatorManager:
         instances = self.list_instances()
         return [inst["index"] for inst in instances if inst["is_running"]]
 
-    def start_instance(self, index=0):
-        """Inicia uma instância específica pelo índice [cite: 63]"""
-        print(f"Iniciando instância {index}...")
-        return self._execute_memuc(['start', '-i', str(index)])
+    def start_instance(self, index=0, timeout=60):
+        """
+        Inicia uma instância e aguarda o boot completo.
+        Conforme requisito 7 (Controle de Erros), possui timeout para evitar travamentos[cite: 127].
+        """
+        print(f"[*] Solicitando inicio da instancia {index}...")
+        
+        # Verifica se já não está rodando
+        if index in self.get_active_ids():
+            print(f"[!] Instancia {index} ja esta ativa.")
+            return True
+
+        # Envia comando de boot via memuc
+        self._execute_memuc(['start', '-i', str(index)])
+        
+        # Loop de aguardo de boot (Resiliência [cite: 130])
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            instances = self.list_instances()
+            for inst in instances:
+                # No memuc listv2, o status '3' ou a presença de PID indica que está carregando/carregado
+                if inst["index"] == index and inst["is_running"]:
+                    print(f"[+] Instancia {index} iniciada com sucesso (PID: {inst['pid']}).")
+                    
+                    # Delay adicional para o servidor ADB interno do Android estabilizar [cite: 132]
+                    time.sleep(5) 
+                    return True
+            
+            time.sleep(2) # Intervalo entre verificações
+            print(f"    - Aguardando boot da instancia {index}...")
+
+        print(f"[X] Erro: Timeout ao iniciar instancia {index} apos {timeout}s.")
+        return False
 
     def stop_instance(self, index=0):
         """Fecha uma instância específica [cite: 58, 130]"""
