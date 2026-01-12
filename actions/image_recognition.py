@@ -75,14 +75,39 @@ class ImageRecognition:
         
         return None
 
-    def wait_for_element(self, template_name, timeout=30, interval=2):
-        """Aguarda um elemento aparecer na tela por um determinado tempo."""
-        start_time = time.time()
-        while time.time() - start_time < timeout:
-            pos = self.find_element(template_name)
-            if pos:
-                return pos
-            time.sleep(interval)
+    def wait_for_element(self, template_name, timeout=30, interval=2, threshold=0.8, click_on_find=False):
+        """
+        Pausa a execução do bot até que uma imagem apareça na tela ou o tempo acabe.
         
-        self.log.warning(f"Timeout aguardando elemento: {template_name}")
+        :param template_name: Nome do arquivo em assets/buttons/ (ex: 'botao_jogar.png').
+        :param timeout: Tempo máximo de espera em segundos.
+        :param interval: Tempo de espera entre cada tentativa de print/scan.
+        :param threshold: Precisão mínima para considerar que a imagem foi encontrada (0.0 a 1.0).
+        :param click_on_find: Se True, clica automaticamente no centro da imagem ao encontrá-la.
+        :return: Coordenadas (x, y) se encontrado, None se der timeout.
+        """
+        self.log.info(f"[*] Aguardando elemento visual: {template_name} (Timeout: {timeout}s)")
+        
+        start_time = time.time()
+        tentativas = 0
+
+        while time.time() - start_time < timeout:
+            tentativas += 1
+            # Tenta localizar a imagem na tela atual
+            pos = self.find_element(template_name, threshold=threshold)
+            
+            if pos:
+                self.log.info(f"[+] Elemento {template_name} detectado na tentativa {tentativas}!")
+                
+                if click_on_find:
+                    from actions.click_actions import ClickActions
+                    ca = ClickActions(self.emu, self.instance_id)
+                    ca.tap(pos[0], pos[1], normalize=False) # find_element já retorna coord real
+                
+                return pos
+            
+            # Aguarda antes da próxima tentativa para não sobrecarregar a CPU
+            time.sleep(interval)
+            
+        self.log.warning(f"[!] TIMEOUT: Elemento {template_name} não apareceu após {timeout}s.")
         return None
