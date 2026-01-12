@@ -74,14 +74,12 @@ class EmulatorManager:
 
     def start_instance(self, index=None, timeout=None):
         target_index = index if index is not None else self.instance_id
-        wait_time = timeout if timeout is not None else self.config.get_timing('timeout_boot', 80) # Aumentei para 80s
+        # Versões novas do MEmu podem levar até 90s para boot completo em HDDs ou CPUs carregadas
+        wait_time = timeout if timeout is not None else 90 
         
-        self.log.info(f"Solicitando boot da instância {target_index}...")
+        self.log.info(f"[*] Iniciando instância {target_index} (Versão Recente MEmu)...")
         
-        if target_index in self.get_active_ids():
-            self.log.warning(f"Instância {target_index} já está ativa.")
-            return True
-
+        # Comando para iniciar
         self._execute_memuc(['start', '-i', str(target_index)])
         
         start_clock = time.time()
@@ -89,16 +87,19 @@ class EmulatorManager:
             instances = self.list_instances()
             for inst in instances:
                 if inst["index"] == target_index:
-                    # Se o PID existir e for diferente de None/0, o emulador abriu
+                    # Verifica se o PID é válido e se o status indica atividade
                     if inst["is_running"] and inst["pid"] and int(inst["pid"]) > 0:
-                        self.log.info(f"Instância {target_index} detectada (PID: {inst['pid']}). Aguardando estabilização...")
-                        time.sleep(10) # Tempo para o sistema Android carregar a interface
-                        return True
+                        # Teste de prontidão real: tentamos um comando ADB simples
+                        check_adb = self._execute_memuc(['adb', '-i', str(target_index), 'shell', 'getprop', 'sys.boot_completed'])
+                        
+                        if check_adb and "1" in check_adb:
+                            self.log.info(f"[+] Instância {target_index} totalmente carregada e responsiva!")
+                            return True
             
-            time.sleep(4) 
-            self.log.info(f"Aguardando boot da instância {target_index}...")
+            time.sleep(5) 
+            self.log.info(f"    - Aguardando sistema Android {target_index} (Status: Booting)...")
 
-        self.log.error(f"Timeout atingido ao tentar iniciar instância {target_index}.")
+        self.log.error(f"[X] Erro Crítico: A instância {target_index} não respondeu ao comando ADB pós-boot.")
         return False
 
     def stop_instance(self, index=None):

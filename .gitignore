@@ -1,0 +1,21 @@
+# Ambientes Virtuais
+venv/
+.env
+
+# Configurações Sensíveis (Proteção de Contas e Proxies)
+config/accounts.json
+config/proxies.json
+config/settings.yaml
+
+# Logs e Screenshots
+logs/
+*.log
+logs/screenshots/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
