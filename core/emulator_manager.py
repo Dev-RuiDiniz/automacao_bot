@@ -73,36 +73,29 @@ class EmulatorManager:
         return [inst["index"] for inst in instances if inst["is_running"]]
 
     def start_instance(self, index=None, timeout=None):
-        """
-        Inicia uma instância e aguarda o boot completo até o timeout[cite: 63, 127].
-        Resiliência: Verifica o status continuamente antes de liberar para o bot[cite: 130].
-        """
         target_index = index if index is not None else self.instance_id
-        wait_time = timeout if timeout is not None else self.config.get_timing('timeout_boot', 60)
+        wait_time = timeout if timeout is not None else self.config.get_timing('timeout_boot', 80) # Aumentei para 80s
         
         self.log.info(f"Solicitando boot da instância {target_index}...")
         
-        # Evita comando redundante se já estiver rodando
         if target_index in self.get_active_ids():
             self.log.warning(f"Instância {target_index} já está ativa.")
             return True
 
         self._execute_memuc(['start', '-i', str(target_index)])
         
-        # Loop de monitoramento de Boot (Requisito 7: Controle de Erros) [cite: 126]
         start_clock = time.time()
         while time.time() - start_clock < wait_time:
             instances = self.list_instances()
             for inst in instances:
-                # O status de execução no listv2 confirma que o processo Android subiu
-                if inst["index"] == target_index and inst["is_running"]:
-                    self.log.info(f"Instância {target_index} carregada (PID: {inst['pid']}).")
-                    
-                    # Delay para estabilização do ADB interno [cite: 132]
-                    time.sleep(5) 
-                    return True
+                if inst["index"] == target_index:
+                    # Se o PID existir e for diferente de None/0, o emulador abriu
+                    if inst["is_running"] and inst["pid"] and int(inst["pid"]) > 0:
+                        self.log.info(f"Instância {target_index} detectada (PID: {inst['pid']}). Aguardando estabilização...")
+                        time.sleep(10) # Tempo para o sistema Android carregar a interface
+                        return True
             
-            time.sleep(3) 
+            time.sleep(4) 
             self.log.info(f"Aguardando boot da instância {target_index}...")
 
         self.log.error(f"Timeout atingido ao tentar iniciar instância {target_index}.")

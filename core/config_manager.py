@@ -14,7 +14,15 @@ class ConfigManager:
         path = os.path.join(self.config_path, file_name)
         if os.path.exists(path):
             with open(path, 'r', encoding='utf-8') as f:
-                return json.load(f)
+                content = f.read().strip()
+                if not content: # Se o arquivo estiver totalmente em branco
+                    return {}
+                try:
+                    import json
+                    return json.loads(content)
+                except Exception as e:
+                    print(f"Erro ao ler {file_name}: {e}")
+                    return {}
         return {}
 
     def load_yaml(self, file_name):

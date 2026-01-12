@@ -1,34 +1,20 @@
-import time
 from core.emulator_manager import EmulatorManager
+from actions.click_actions import ClickActions
+import time
 
-def test_ciclo_vida_memu():
-    print("=== INICIANDO TESTE DE CONEXÃO MEmu ===")
-    
-    # Inicializa o gerenciador (o ID 0 é a instância base) [cite: 62]
+def test_completo():
     emu = EmulatorManager(instance_id=0)
+    click = ClickActions(emu, instance_id=0)
     
-    try:
-        # 1. Tenta iniciar a instância e aguarda o boot [cite: 63, 127]
-        # O timeout de 60s segue a regra de resiliência [cite: 130]
-        sucesso = emu.start_instance(index=0, timeout=60)
-        
-        if sucesso:
-            print("[TESTE] Instância 0 está online e pronta!")
-            
-            # Aguarda 5 segundos apenas para visualização no teste [cite: 132]
-            print("[TESTE] Aguardando 5 segundos antes de fechar...")
-            time.sleep(5)
-            
-            # 2. Tenta fechar a instância [cite: 58]
-            emu.stop_instance(index=0)
-            print("[TESTE] Comando de fechamento enviado com sucesso.")
-        else:
-            print("[TESTE] FALHA: A instância não iniciou dentro do tempo limite.")
-
-    except Exception as e:
-        print(f"[TESTE] Ocorreu um erro inesperado: {e}")
-    
-    print("=== FIM DO TESTE ===")
+    if emu.start_instance(index=0):
+        print("[SUCESSO] Emulador pronto! Testando comando Home...")
+        time.sleep(2)
+        click.home_button() # Se funcionar, o Android reagirá
+        print("[TESTE] Comando enviado. Verifique a tela do MEmu.")
+        time.sleep(5)
+        # emu.stop_instance(0) # Comentei para você ver o resultado na tela
+    else:
+        print("[FALHA] Não foi possível estabilizar o emulador.")
 
 if __name__ == "__main__":
-    test_ciclo_vida_memu()
+    test_completo()
