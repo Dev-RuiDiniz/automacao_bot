@@ -11,5 +11,9 @@
         "medio": 3.0,
         "longo": 5.0,
         "timeout_boot": 90
+    },
+    "ui_regions": {
+        "nickname": {"x": 50, "y": 10, "w": 150, "h": 30},
+        "chips_amount": {"x": 600, "y": 680, "w": 100, "h": 25}
     }
 }
