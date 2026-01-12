@@ -39,3 +39,12 @@ class ConfigManager:
     def get_timing(self, key, default=1.5):
         """Retorna tempos de espera configurados [cite: 49, 132]"""
         return self.timings.get(key, default)
+    
+    def get_ui_point(self, point_name):
+        """Retorna um dicionário {'x': val, 'y': val} para o ponto solicitado"""
+        ui_points = self.timings.get("ui_points", {})
+        point = ui_points.get(point_name)
+        if not point:
+            print(f"[!] Aviso: Ponto de UI '{point_name}' não encontrado no JSON.")
+            return {"x": 0, "y": 0}
+        return point

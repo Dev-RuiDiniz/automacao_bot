@@ -1,1 +1,15 @@
-{}
+{
+    "ui_points": {
+        "botao_jogar": {"x": 640, "y": 400},
+        "botao_aceitar_termos": {"x": 500, "y": 550},
+        "botao_fechar_promo": {"x": 1200, "y": 50},
+        "botao_entrar_mesa": {"x": 800, "y": 300},
+        "botao_sentar_posicao": {"x": 640, "y": 600}
+    },
+    "delays": {
+        "curto": 1.5,
+        "medio": 3.0,
+        "longo": 5.0,
+        "timeout_boot": 90
+    }
+}
