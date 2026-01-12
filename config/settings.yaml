@@ -1,0 +1,9 @@
+# Configurações Gerais do Projeto [cite: 4]
+project_name: "Sistema de Automação de Emuladores Android"
+emulator:
+  type: "MEmu"
+  [cite_start]path: "D:\\Program Files\\Microvirt\\MEmu\\memuc.exe" # Caminho do memuc [cite: 6]
+  [cite_start]instances_limit: 9 # Limite para o Bot de Recolher [cite: 107]
+logging:
+  level: "INFO"
+  save_to_file: true
