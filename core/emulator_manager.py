@@ -25,8 +25,32 @@ class EmulatorManager:
             return None
 
     def list_instances(self):
-        """Lista todas as instâncias do MEmu [cite: 6]"""
-        return self._execute_memuc(['listv2'])
+        """
+        Lista todas as instâncias e retorna uma lista de dicionários.
+        O comando 'listv2' retorna: índice, título, top_level_window, 
+        status_inicialização, processo_id, etc.
+        """
+        raw_data = self._execute_memuc(['listv2'])
+        if not raw_data:
+            return []
+
+        instances = []
+        for line in raw_data.splitlines():
+            parts = line.split(',')
+            if len(parts) >= 4:
+                instance_info = {
+                    "index": int(parts[0]),
+                    "title": parts[1],
+                    "is_running": parts[3] != "-1", # -1 significa desligado
+                    "pid": parts[4] if len(parts) > 4 else None
+                }
+                instances.append(instance_info)
+        return instances
+
+    def get_active_ids(self):
+        """Retorna apenas os IDs (índices) das instâncias que estão ligadas."""
+        instances = self.list_instances()
+        return [inst["index"] for inst in instances if inst["is_running"]]
 
     def start_instance(self, index=0):
         """Inicia uma instância específica pelo índice [cite: 63]"""
