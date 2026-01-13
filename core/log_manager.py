@@ -43,3 +43,6 @@ class LogManager:
 
     def warning(self, message):
         self.logger.warning(message)
+        
+    def critical(self, message):
+        self.logger.critical(message)

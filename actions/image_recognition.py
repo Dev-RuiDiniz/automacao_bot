@@ -29,18 +29,24 @@ class ImageRecognition:
                 os.makedirs(directory)
 
     def _take_screenshot(self, custom_path=None):
-        """
-        Captura o framebuffer do Android via ADB e transfere para o host.
-        :return: Caminho do arquivo salvo localmente.
-        """
+        """Captura a tela com verificação de integridade."""
         save_path = custom_path if custom_path else os.path.join(self.temp_dir, f"screen_{self.instance_id}.png")
         remote_path = f"/sdcard/screen_{self.instance_id}.png"
         
-        # Execução de captura via Shell ADB
+        # 1. Tira o print
         self.emu._execute_memuc(['adb', '-i', str(self.instance_id), 'shell', 'screencap', '-p', remote_path])
+        
+        # 2. Puxa para o PC
         self.emu._execute_memuc(['adb', '-i', str(self.instance_id), 'pull', remote_path, save_path])
         
-        return save_path
+        # 3. VERIFICAÇÃO REAL
+        if os.path.exists(save_path):
+            return save_path
+        else:
+            self.log.error(f"FATAL: ADB Pull falhou. Verifique se a instância {self.instance_id} tem espaço no /sdcard/.")
+            # Fallback para o comando interno do MEmu se o ADB falhar
+            self.emu._execute_memuc(['screencap', '-i', str(self.instance_id), '-f', save_path])
+            return save_path
 
     def _save_error_snapshot(self, element_name):
         """

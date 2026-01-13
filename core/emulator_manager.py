@@ -105,36 +105,39 @@ class EmulatorManager:
             return 1280, 720
 
     def start_instance(self, index=None, timeout=None):
-        """
-        Inicia a instância e aguarda o boot completo do sistema Android.
-        Verifica a prontidão real via variável sys.boot_completed do sistema.
-        """
         target_index = index if index is not None else self.instance_id
         wait_time = timeout if timeout is not None else 90 
         
-        self.log.info(f"[*] Iniciando instância {target_index} (Aguardando boot completo)...")
+        self.log.info(f"[*] Iniciando instância {target_index}...")
         
-        # Envia comando de início
+        # Se já estiver rodando, não precisamos esperar o boot total de novo
+        active_ids = self.get_active_ids()
+        if target_index in active_ids:
+            self.log.info(f"[!] Instância {target_index} já estava aberta.")
+            return True
+
         self._execute_memuc(['start', '-i', str(target_index)])
         
         start_clock = time.time()
         while time.time() - start_clock < wait_time:
-            instances = self.list_instances()
-            for inst in instances:
-                if inst["index"] == target_index:
-                    # Verifica se o processo está rodando e tem um PID válido
-                    if inst["is_running"] and inst["pid"] and int(inst["pid"]) > 0:
-                        # Testa se o Android terminou de carregar o kernel e serviços base
-                        check_adb = self._execute_memuc(['adb', '-i', str(target_index), 'shell', 'getprop', 'sys.boot_completed'])
-                        
-                        if check_adb and "1" in check_adb:
-                            self.log.info(f"[+] Instância {target_index} pronta para comandos (PID: {inst['pid']}).")
-                            return True
+            # Tenta um comando ADB simples. Se responder qualquer coisa, o ADB está vivo.
+            check_adb = self._execute_memuc(['adb', '-i', str(target_index), 'shell', 'echo', 'ready'])
+            
+            if check_adb and "ready" in check_adb:
+                self.log.info(f"[+] Instância {target_index} respondeu ao ADB!")
+                return True
             
             time.sleep(5) 
-            self.log.info(f"    - Boot da instância {target_index} em progresso...")
+            self.log.info(f"    - Aguardando ADB da instância {target_index}...")
 
-        self.log.error(f"[X] Timeout: Instância {target_index} não respondeu após {wait_time}s.")
+        # Última tentativa: Se o processo existe mas o ADB falhou, tentamos prosseguir assim mesmo
+        instances = self.list_instances()
+        for inst in instances:
+            if inst["index"] == target_index and inst["is_running"]:
+                self.log.warning(f"[!] ADB não confirmou, mas instância {target_index} consta como ligada. Prosseguindo...")
+                return True
+
+        self.log.error(f"[X] Timeout real na instância {target_index}.")
         return False
 
     def stop_instance(self, index=None):

@@ -165,3 +165,23 @@
 2026-01-13 08:33:22,837 - Instance_0 - INFO -     - Boot da instância 0 em progresso...
 2026-01-13 08:33:27,988 - Instance_0 - INFO -     - Boot da instância 0 em progresso...
 2026-01-13 08:33:27,991 - Instance_0 - ERROR - [X] Timeout: Instância 0 não respondeu após 90s.
+2026-01-13 08:41:17,420 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 08:41:18,254 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-13 08:41:18,255 - Instance_0 - INFO - [*] Iniciando instância 0...
+2026-01-13 08:41:20,873 - Instance_0 - INFO - [+] Instância 0 respondeu ao ADB!
+2026-01-13 08:41:30,877 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 45s)
+2026-01-13 08:42:17,734 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-13 08:45:12,854 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 08:45:13,089 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-13 08:45:13,090 - Instance_0 - INFO - [*] Iniciando instância 0...
+2026-01-13 08:45:15,675 - Instance_0 - INFO - [+] Instância 0 respondeu ao ADB!
+2026-01-13 08:45:25,676 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 45s)
+2026-01-13 08:46:12,452 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-13 08:46:13,297 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260113_084612.png
+2026-01-13 09:15:22,943 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 09:15:23,216 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-13 09:15:23,217 - Instance_0 - INFO - [*] Iniciando instância 0...
+2026-01-13 09:15:26,721 - Instance_0 - INFO - [+] Instância 0 respondeu ao ADB!
+2026-01-13 09:15:36,723 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 45s)
+2026-01-13 09:16:22,528 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-13 09:16:23,922 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260113_091622.png
