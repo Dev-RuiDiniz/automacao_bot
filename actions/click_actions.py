@@ -12,7 +12,7 @@ class ClickActions:
         self.log = emulator_manager.log
         
         # Detecta resolução real para normalização
-        curr_w, curr_h = self.emu.get_screen_resolution(instance_id)
+        curr_w, curr_h = self.emu.get_screen_resolution()
         self.utils = UIUtils(current_width=curr_w, current_height=curr_h, 
                              base_width=base_res[0], base_height=base_res[1])
         

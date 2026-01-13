@@ -6,32 +6,22 @@ from core.log_manager import LogManager
 
 class EmulatorManager:
     """
-    Responsável pelo controle de ciclo de vida das instâncias do MEmu (memuc.exe).
-    Gerencia criação, clonagem, inicialização, monitoramento de status e 
-    extração de metadados da interface (UI).
+    Gerenciador de Ciclo de Vida do MEmu (memuc.exe).
+    Responsável por: Ligar/Desligar, Clonagem, Gerenciamento de Apps e 
+    Verificação de saúde via ADB.
     """
 
     def __init__(self, instance_id=0):
-        """
-        Inicializa o gerenciador com as configurações globais e o logger específico.
-        :param instance_id: ID da instância principal que este objeto monitora.
-        """
         self.config = ConfigManager()
         self.instance_id = instance_id
-        
-        # Inicializa o logger individual para garantir rastreabilidade por conta
         self.log = LogManager(instance_id)
         
-        # Localiza o executável memuc definido no config/settings.yaml
+        # Caminho do executável MEmu
         self.memuc_path = self.config.settings.get('emulator', {}).get('path', 'memuc.exe')
-        
-        self.log.info(f"EmulatorManager inicializado usando path: {self.memuc_path}")
+        self.log.info(f"EmulatorManager inicializado: {self.memuc_path}")
 
     def _execute_memuc(self, args):
-        """
-        Executa comandos de baixo nível via subprocesso para o CLI do MEmu (memuc.exe).
-        Retorna a saída limpa (string) ou None em caso de falha.
-        """
+        """Executa comandos no CLI do MEmu e retorna a saída limpa."""
         try:
             command = [self.memuc_path] + args
             result = subprocess.run(
@@ -40,123 +30,111 @@ class EmulatorManager:
                 stderr=subprocess.PIPE, 
                 text=True, 
                 check=True,
-                encoding='utf-8' # Suporte a caracteres especiais nos logs
+                encoding='utf-8'
             )
             return result.stdout.strip()
         except subprocess.CalledProcessError as e:
-            self.log.error(f"Falha ao executar comando memuc {args}: {e.stderr}")
+            self.log.error(f"Falha memuc {args}: {e.stderr}")
             return None
         except FileNotFoundError:
-            self.log.error(f"Executável memuc.exe não encontrado no caminho: {self.memuc_path}")
+            self.log.error(f"Executável não encontrado em: {self.memuc_path}")
             return None
 
-    def list_instances(self):
-        """
-        Analisa a saída do comando 'listv2' para mapear todas as instâncias existentes.
-        Retorna: Lista de dicionários com [index, title, is_running, pid].
-        """
-        raw_data = self._execute_memuc(['listv2'])
-        if not raw_data:
-            return []
+    # --- NOVO: GERENCIAMENTO DE ESTADO E INICIALIZAÇÃO ---
 
+    def is_running(self):
+        """Verifica se a instância específica está ativa."""
+        output = self._execute_memuc(['isrunning', '-i', str(self.instance_id)])
+        return "Running" in str(output)
+
+    def launch_instance(self, timeout=120):
+        """
+        Liga o emulador e aguarda o sistema Android estar pronto para receber comandos ADB.
+        Garante que o 'ADB Pull' não falhe por falta de inicialização.
+        """
+        if self.is_running():
+            self.log.info(f"[!] Instância {self.instance_id} já está rodando.")
+            return True
+
+        self.log.info(f"[*] Iniciando Instância {self.instance_id} (Aguardando Boot)...")
+        self._execute_memuc(['start', '-i', str(self.instance_id)])
+        
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            # Comando de teste para verificar se o sistema de arquivos está montado
+            check = self._execute_memuc(['adb', '-i', str(self.instance_id), 'shell', 'echo', 'ready'])
+            if check and "ready" in check:
+                self.log.info(f"✅ Instância {self.instance_id} pronta!")
+                time.sleep(5) # Buffer de estabilidade
+                return True
+            time.sleep(5)
+            self.log.info(f"  - Boot em curso ({int(time.time() - start_time)}s)...")
+
+        self.log.error(f"❌ Timeout ao iniciar instância {self.instance_id}.")
+        return False
+
+    def launch_app(self, package_name="com.playshoo.texaspoker.romania"):
+        """Lança o app de Poker de forma forçada e limpa."""
+        self.log.info(f"[*] Lançando aplicativo: {package_name}")
+        
+        # 1. Garante que qualquer instância travada do app seja fechada antes
+        self._execute_memuc(['adb', '-i', str(self.instance_id), 'shell', 'am', 'force-stop', package_name])
+        time.sleep(1)
+        
+        # 2. Comando Monkey para disparar a Intent principal
+        cmd = ['adb', '-i', str(self.instance_id), 'shell', 'monkey', '-p', package_name, '-c', 'android.intent.category.LAUNCHER', '1']
+        self._execute_memuc(cmd)
+        
+        # 3. Aguarda o processo aparecer no sistema
+        time.sleep(5)
+        check = self._execute_memuc(['adb', '-i', str(self.instance_id), 'shell', 'pidof', package_name])
+        if check:
+            self.log.info(f"✅ App {package_name} carregando (PID: {check})")
+            return True
+        return False
+
+    def stop_app(self, package_name="com.poker.package"):
+        """Força o encerramento do app (útil para economizar CPU após maturação)."""
+        self.log.info(f"[*] Encerrando app: {package_name}")
+        return self._execute_memuc(['adb', '-i', str(self.instance_id), 'shell', 'am', 'force-stop', package_name])
+
+    # --- GERENCIAMENTO DE INSTÂNCIAS ---
+
+    def list_instances(self):
+        """Mapeia todas as instâncias existentes."""
+        raw_data = self._execute_memuc(['listv2'])
+        if not raw_data: return []
+        
         instances = []
         for line in raw_data.splitlines():
             parts = line.split(',')
             if len(parts) >= 4:
-                instance_info = {
+                instances.append({
                     "index": int(parts[0]),
                     "title": parts[1],
-                    "is_running": parts[3] != "-1", # -1 indica que o processo não existe
+                    "is_running": parts[3] != "-1",
                     "pid": parts[4] if len(parts) > 4 else None
-                }
-                instances.append(instance_info)
+                })
         return instances
 
-    def get_active_ids(self):
-        """Retorna uma lista contendo apenas os IDs das instâncias ligadas."""
-        instances = self.list_instances()
-        return [inst["index"] for inst in instances if inst["is_running"]]
-
-    def get_screen_resolution(self, index=None):
-        """
-        Obtém a resolução real da tela da instância via comando 'wm size' do ADB.
-        Essencial para a normalização de coordenadas entre 720p/1080p.
-        """
-        target_index = index if index is not None else self.instance_id
-        # Executa comando adb shell para pegar o tamanho da janela
-        cmd_output = self._execute_memuc(['adb', '-i', str(target_index), 'shell', 'wm', 'size'])
+    def get_screen_resolution(self):
+        """Detecta resolução para normalizar cliques."""
+        cmd_output = self._execute_memuc(['adb', '-i', str(self.instance_id), 'shell', 'wm', 'size'])
+        if not cmd_output: return 1280, 720
         
-        if not cmd_output:
-            self.log.warning(f"Não foi possível obter resolução para instância {target_index}. Usando 1280x720.")
-            return 1280, 720
-
-        # Prioriza 'Override size' (resoluções customizadas) sobre 'Physical size'
-        if "Override size:" in cmd_output:
-            res_str = cmd_output.split("Override size: ")[1].strip()
-        elif "Physical size:" in cmd_output:
-            res_str = cmd_output.split("Physical size: ")[1].strip()
-        else:
-            return 1280, 720 # Fallback padrão
-            
         try:
-            width, height = map(int, res_str.split('x'))
-            return width, height
-        except ValueError:
+            res_line = [l for l in cmd_output.splitlines() if "size:" in l][0]
+            res_str = res_line.split(": ")[1].strip()
+            return map(int, res_str.split('x'))
+        except:
             return 1280, 720
-
-    def start_instance(self, index=None, timeout=None):
-        target_index = index if index is not None else self.instance_id
-        wait_time = timeout if timeout is not None else 90 
-        
-        self.log.info(f"[*] Iniciando instância {target_index}...")
-        
-        # Se já estiver rodando, não precisamos esperar o boot total de novo
-        active_ids = self.get_active_ids()
-        if target_index in active_ids:
-            self.log.info(f"[!] Instância {target_index} já estava aberta.")
-            return True
-
-        self._execute_memuc(['start', '-i', str(target_index)])
-        
-        start_clock = time.time()
-        while time.time() - start_clock < wait_time:
-            # Tenta um comando ADB simples. Se responder qualquer coisa, o ADB está vivo.
-            check_adb = self._execute_memuc(['adb', '-i', str(target_index), 'shell', 'echo', 'ready'])
-            
-            if check_adb and "ready" in check_adb:
-                self.log.info(f"[+] Instância {target_index} respondeu ao ADB!")
-                return True
-            
-            time.sleep(5) 
-            self.log.info(f"    - Aguardando ADB da instância {target_index}...")
-
-        # Última tentativa: Se o processo existe mas o ADB falhou, tentamos prosseguir assim mesmo
-        instances = self.list_instances()
-        for inst in instances:
-            if inst["index"] == target_index and inst["is_running"]:
-                self.log.warning(f"[!] ADB não confirmou, mas instância {target_index} consta como ligada. Prosseguindo...")
-                return True
-
-        self.log.error(f"[X] Timeout real na instância {target_index}.")
-        return False
-
-    def stop_instance(self, index=None):
-        """Finaliza a execução de uma instância de forma segura."""
-        target_index = index if index is not None else self.instance_id
-        self.log.warning(f"Encerrando instância {target_index}...")
-        return self._execute_memuc(['stop', '-i', str(target_index)])
 
     def clone_instance(self, source_index=0):
-        """Cria um clone de uma instância existente."""
-        self.log.info(f"Clonando instância base {source_index}...")
+        """Clona a instância base (Tarefa 1)."""
+        self.log.info(f"Clonando base {source_index}...")
         return self._execute_memuc(['clone', '-i', str(source_index)])
 
-    def create_instance(self):
-        """Cria uma nova instância limpa (Android padrão do MEmu)."""
-        self.log.info("Criando nova instância Android...")
-        return self._execute_memuc(['create'])
-
     def remove_instance(self, index):
-        """Remove permanentemente uma instância do disco."""
+        """Deleta a instância do disco (Tarefa 8)."""
         self.log.error(f"Removendo instância {index} permanentemente.")
         return self._execute_memuc(['remove', '-i', str(index)])

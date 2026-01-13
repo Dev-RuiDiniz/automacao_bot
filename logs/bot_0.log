@@ -194,3 +194,63 @@
 2026-01-13 12:12:39,058 - Instance_0 - INFO - [*] Iniciando instância 0...
 2026-01-13 12:12:41,834 - Instance_0 - INFO - [+] Instância 0 respondeu ao ADB!
 2026-01-13 12:12:42,318 - Instance_0 - INFO - Configurando Proxy na Instância 0: SEU_IP_AQUI:SUA_PORTA_AQUI
+2026-01-13 13:56:26,532 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 13:56:41,669 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 13:56:41,669 - Instance_0 - INFO - [*] Iniciando clonagem da Instância Base (ID: 0)...
+2026-01-13 13:58:39,199 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 13:59:14,265 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 14:00:09,380 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 14:00:14,543 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 14:00:15,090 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-13 14:00:15,429 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-13 14:00:15,430 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-13 14:00:15,430 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-13 14:00:20,823 - Instance_0 - INFO - OCR (aviso_bloqueio): ae
+2026-01-13 14:00:20,825 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 20s)
+2026-01-13 14:00:42,738 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-13 14:00:43,471 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260113_140042.png
+2026-01-13 14:00:43,480 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-13 14:00:59,246 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-13 14:01:01,257 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260113_140059.png
+2026-01-13 14:01:01,258 - Instance_0 - ERROR - ❌ Botão 'Visitante' não encontrado. Abortando.
+2026-01-13 14:01:32,723 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 14:01:39,901 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 14:01:40,042 - Instance_0 - WARNING - Não foi possível obter resolução para instância 0. Usando 1280x720.
+2026-01-13 14:01:40,043 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-13 14:01:40,182 - Instance_0 - WARNING - Não foi possível obter resolução para instância 0. Usando 1280x720.
+2026-01-13 14:01:40,183 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-13 14:01:40,183 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-13 14:01:40,183 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-13 14:01:40,782 - Instance_0 - INFO - OCR (aviso_bloqueio): ae
+2026-01-13 14:01:40,784 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 20s)
+2026-01-13 14:02:01,881 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-13 14:02:02,126 - Instance_0 - ERROR - FATAL: ADB Pull falhou. Verifique se a instância 0 tem espaço no /sdcard/.
+2026-01-13 14:02:02,250 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260113_140201.png
+2026-01-13 14:02:02,251 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-13 14:02:18,381 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-13 14:02:18,622 - Instance_0 - ERROR - FATAL: ADB Pull falhou. Verifique se a instância 0 tem espaço no /sdcard/.
+2026-01-13 14:02:18,748 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260113_140218.png
+2026-01-13 14:02:18,748 - Instance_0 - ERROR - ❌ Botão 'Visitante' não encontrado. Abortando.
+2026-01-13 14:06:40,677 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 14:06:40,962 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-13 14:07:03,599 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-13 14:07:08,995 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 14:11:43,654 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 14:11:43,935 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-13 14:11:46,520 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-13 14:11:51,774 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 14:11:52,062 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-13 14:11:52,316 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-13 14:11:52,316 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-13 14:11:52,454 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-13 14:11:55,715 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-13 14:12:00,717 - Instance_0 - INFO - [*] Lançando app: com.poker.package
+2026-01-13 14:12:16,671 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-13 14:12:18,745 - Instance_0 - INFO - OCR (aviso_bloqueio): Oo
+2026-01-13 14:12:18,746 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 30s)
+2026-01-13 14:12:50,782 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-13 14:12:51,762 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260113_141250.png
+2026-01-13 14:12:51,763 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 20s)
+2026-01-13 14:13:13,747 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-13 14:13:14,714 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260113_141313.png
+2026-01-13 14:13:14,714 - Instance_0 - ERROR - ❌ Botão 'Visitante' não encontrado. Abortando.
