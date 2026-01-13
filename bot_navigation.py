@@ -3,6 +3,7 @@ from actions.image_recognition import ImageRecognition
 from actions.click_actions import ClickActions
 from actions.ui_cleaner import UICleaner       # Novo: Zelador de interface
 from core.block_handler import BlockHandler
+from actions.daily_bonus import DailyBonus
 import time
 
 class AccountCreatorBot:
@@ -40,6 +41,10 @@ class AccountCreatorBot:
         else:
             self.log.error("[-] Botão Visitante não apareceu.")
             return False
+        
+        self.log.info("[*] Iniciando verificação de Bônus Diário...")
+        bonus = DailyBonus(self.emu, self.instance_id)
+        bonus.check_and_spin()
 
         # --- PASSO 4: LIMPEZA DE UI (PROMOÇÕES) ---
         # Após o login, o jogo costuma disparar janelas de 'Bônus Diário' e 'Ofertas'.
