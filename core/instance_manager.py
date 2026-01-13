@@ -33,3 +33,15 @@ class InstanceManager:
         """Remove instâncias que foram bloqueadas (limpeza de disco)."""
         self.log.warning(f"[*] Removendo instância {instance_id} do sistema...")
         return self.emu._execute_memuc(['remove', '-i', str(instance_id)])
+    
+    def recycle_instance(self, instance_id, base_id=0):
+        """Deleta a instância bloqueada e cria uma nova para substituí-la."""
+        self.log.warning(f"[♻️] Reciclando instância {instance_id}...")
+        
+        # 1. Deleta a instância ruim
+        self.delete_instance(instance_id)
+        time.sleep(2)
+        
+        # 2. Cria uma nova a partir da base
+        new_id = self.create_new_account_instance(base_id)
+        return new_id
