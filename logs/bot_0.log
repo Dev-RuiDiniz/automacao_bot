@@ -185,3 +185,12 @@
 2026-01-13 09:15:36,723 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 45s)
 2026-01-13 09:16:22,528 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
 2026-01-13 09:16:23,922 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260113_091622.png
+2026-01-13 12:06:59,678 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 12:06:59,679 - Instance_0 - INFO - [*] Iniciando instância 0...
+2026-01-13 12:09:04,857 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 12:09:04,857 - Instance_0 - INFO - [*] Iniciando instância 0...
+2026-01-13 12:09:27,460 - Instance_0 - INFO - [+] Instância 0 respondeu ao ADB!
+2026-01-13 12:12:39,057 - Instance_0 - INFO - EmulatorManager inicializado usando path: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-13 12:12:39,058 - Instance_0 - INFO - [*] Iniciando instância 0...
+2026-01-13 12:12:41,834 - Instance_0 - INFO - [+] Instância 0 respondeu ao ADB!
+2026-01-13 12:12:42,318 - Instance_0 - INFO - Configurando Proxy na Instância 0: SEU_IP_AQUI:SUA_PORTA_AQUI
