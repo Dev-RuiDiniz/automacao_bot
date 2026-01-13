@@ -3,6 +3,16 @@ from actions.image_recognition import ImageRecognition
 from actions.click_actions import ClickActions
 import time
 
+from core.name_generator import NameGenerator
+
+gen = NameGenerator()
+novo_nome = gen.generate_human_like()
+
+print(f"[*] Nickname sugerido para a conta: {novo_nome}")
+
+# Exemplo de uso com o teclado do ADB
+# self.emu._execute_memuc(['adb', '-i', '0', 'shell', 'input', 'text', novo_nome])
+
 def test_visao_jogo():
     print("\n=== INICIANDO TESTE DE VISÃO COMPUTACIONAL ===")
     
