@@ -1,0 +1,58 @@
+AUTOMACAO_BOT/
+├── main.py                     # Ponto de entrada principal do sistema (Dia 3). Gerencia o fluxo inicial.
+├── bot_navigation.py           # Lógica de navegação sequencial entre menus e telas do jogo.
+├── requirements.txt            # Lista de bibliotecas Python necessárias (PyAutoGUI, OpenCV, etc).
+├── .gitignore                  # Define arquivos e pastas que não devem ser enviados ao Git (ex: venv, __pycache__).
+├── README.md                   # Documentação geral do projeto e instruções de uso.
+│
+├── 📂 actions/                 # Módulos de ações específicas realizadas dentro do jogo.
+│   ├── click_actions.py        # Comandos de clique, arraste e interações físicas via ADB.
+│   ├── daily_bonus.py          # Lógica para detectar e coletar bônus diários e girar a roleta.
+│   ├── image_recognition.py    # Coração da visão computacional (localização de templates na tela).
+│   ├── maturation_manager.py   # Gerencia o tempo de permanência na mesa para "aquecer" a conta.
+│   ├── nickname_manager.py     # Automatiza a troca do nome do usuário no perfil.
+│   ├── ocr_manager.py          # Reconhecimento de caracteres (leitura de valores de saldo, nomes, etc).
+│   ├── slot_manager.py         # Automação completa para jogar nas máquinas de Slot (Tarefa 6).
+│   ├── ui_cleaner.py           # Módulo para fechar pop-ups e propagandas inesperadas (Tarefa 3).
+│   └── wait_conditions.py      # Lógicas de espera inteligente até que um elemento apareça na tela.
+│
+├── 📂 assets/                  # Arquivos estáticos e recursos visuais (Templates para busca).
+│   ├── 📂 buttons/             # Recortes de botões (aceitar, jogar_agora, poker_brasil, visitante).
+│   ├── 📂 profile/             # Imagens da tela de perfil (campo de nome, editar, confirmar).
+│   ├── 📂 slots/               # Assets específicos das máquinas de slot (aposta, girar, linhas).
+│   └── 📂 ui/                  # Elementos gerais da interface (ícones de bônus, mesa ativa, roleta).
+│
+├── 📂 bots/                    # Scripts orquestradores para diferentes comportamentos de conta.
+│   ├── collect_bot.py          # Bot focado apenas em coletar bônus em várias contas.
+│   ├── new_accounts_bot.py     # Orquestrador completo para criação e maturação de contas novas (Tarefa 10).
+│   └── rotate_accounts_bot.py  # Gerencia a troca (logoff/login) entre diferentes perfis.
+│
+├── 📂 config/                  # Arquivos de configuração e bases de dados locais.
+│   ├── accounts.json           # Banco de dados das contas registradas (nickname, status, data).
+│   ├── proxies.json            # Lista de IPs e Proxies utilizados para evitar banimentos.
+│   ├── settings.yaml           # Configurações globais do sistema (resolução, caminhos, flags).
+│   └── timings.json            # Configuração de delays e tempos de espera entre ações.
+│
+├── 📂 core/                    # Motores fundamentais do sistema.
+│   ├── account_manager.py      # Lógica de login e gerenciamento de credenciais.
+│   ├── account_registry.py     # Persistência de dados das contas finalizadas (Tarefa 9).
+│   ├── block_handler.py        # Detector de banimentos e bloqueios de IP (Tarefa 8).
+│   ├── config_manager.py       # Leitor central dos arquivos da pasta /config.
+│   ├── emulator_manager.py     # Interface de comunicação direta com o console do MEmu.
+│   ├── instance_manager.py     # Gerencia a criação, clonagem e exclusão de instâncias (Tarefa 1).
+│   ├── log_manager.py          # Centraliza a geração de logs no console e em arquivos.
+│   ├── name_generator.py       # Gerador de nomes aleatórios com aparência humana (Dia 2).
+│   ├── proxy_manager.py        # Gerencia a rotação e teste de proxies.
+│   └── ui_utils.py             # Funções utilitárias auxiliares para cálculos de interface.
+│
+├── 📂 logs/                    # Histórico de execução e diagnósticos.
+│   ├── bot_0.log               # Registro detalhado em texto de todas as ações da instância 0.
+│   ├── 📂 errors/              # Prints de tela salvos automaticamente quando o bot falha.
+│   └── 📂 screenshots/         # Prints temporários para depuração da visão computacional.
+│
+├── 📂 tests/                   # Scripts de testes unitários.
+│   ├── test_memu.py            # Valida a conexão com o emulador.
+│   ├── test_proxy.py           # Valida se o proxy está funcionando e ocultando o IP real.
+│   └── test_vision.py          # Valida se o bot está reconhecendo os botões corretamente.
+│
+└── 📂 venv/                    # Ambiente virtual Python (isolamento de bibliotecas).
