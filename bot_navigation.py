@@ -1,10 +1,11 @@
 from core.emulator_manager import EmulatorManager
 from actions.image_recognition import ImageRecognition
 from actions.click_actions import ClickActions
-from actions.ui_cleaner import UICleaner       
+from actions.ui_cleaner import UICleaner
 from core.block_handler import BlockHandler
 from actions.daily_bonus import DailyBonus
-from actions.maturation_manager import MaturationManager # Importado módulo de maturação
+from actions.maturation_manager import MaturationManager
+from actions.slot_manager import SlotManager
 import time
 
 class AccountCreatorBot:
@@ -58,6 +59,9 @@ class AccountCreatorBot:
         # Fecha propagandas e ofertas que surgem logo após o login
         self.log.info("[*] Limpando interface de promoções...")
         self.cleaner.clean_ui(iterations=3)
+        self.log.info("[*] Direcionando para maturação em Slot Clássico...")
+        slot = SlotManager(self.emu, self.instance_id)
+        slot.setup_and_run(duration_minutes=10)
 
         # --- PASSO 6: SELEÇÃO DE MODO DE JOGO ---
         # Direciona o bot para a seção correta (Ex: Poker Brasil)
