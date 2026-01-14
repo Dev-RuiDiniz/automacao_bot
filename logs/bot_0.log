@@ -254,3 +254,504 @@
 2026-01-13 14:13:13,747 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
 2026-01-13 14:13:14,714 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260113_141313.png
 2026-01-13 14:13:14,714 - Instance_0 - ERROR - ❌ Botão 'Visitante' não encontrado. Abortando.
+2026-01-14 12:01:03,282 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:03:02,104 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:03:05,103 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:04:15,395 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:04:20,840 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:04:21,361 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-14 12:04:21,607 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-14 12:04:21,610 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:04:21,747 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:04:26,227 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:04:31,230 - Instance_0 - INFO - [*] Lançando aplicativo: com.poker.package
+2026-01-14 12:04:42,488 - Instance_0 - INFO - ✅ App com.poker.package carregando (PID: already connected to 127.0.0.1:21503)
+2026-01-14 12:04:57,489 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:05:20,726 - Instance_0 - INFO - OCR (aviso_bloqueio): Leven Play Store
+2026-01-14 12:05:20,728 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 30s)
+2026-01-14 12:05:51,264 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:05:52,197 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_120551.png
+2026-01-14 12:05:52,197 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 20s)
+2026-01-14 12:06:17,862 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:06:33,157 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_120617.png
+2026-01-14 12:06:33,158 - Instance_0 - ERROR - ❌ Botão 'Visitante' não encontrado. Abortando.
+2026-01-14 12:06:39,051 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:06:39,346 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:06:42,722 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:06:47,996 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:06:48,316 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-14 12:06:48,570 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1600x900
+2026-01-14 12:06:48,570 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:06:48,719 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:06:51,908 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:06:56,909 - Instance_0 - INFO - [*] Lançando aplicativo: com.poker.package
+2026-01-14 12:07:04,306 - Instance_0 - INFO - ✅ App com.poker.package carregando (PID: already connected to 127.0.0.1:21503)
+2026-01-14 12:07:19,307 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:07:20,899 - Instance_0 - INFO - OCR (aviso_bloqueio): Leven Play Store
+2026-01-14 12:07:20,901 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 30s)
+2026-01-14 12:07:52,886 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:07:55,558 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_120752.png
+2026-01-14 12:07:55,560 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 20s)
+2026-01-14 12:08:18,477 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:08:20,826 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_120818.png
+2026-01-14 12:08:20,828 - Instance_0 - ERROR - ❌ Botão 'Visitante' não encontrado. Abortando.
+2026-01-14 12:11:40,048 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:11:40,371 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:11:45,202 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:11:50,515 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:11:50,981 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:11:51,225 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:11:51,226 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:11:51,367 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:11:54,726 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:11:59,726 - Instance_0 - INFO - [*] Lançando aplicativo: com.poker.package
+2026-01-14 12:12:25,051 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:12:25,344 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:12:28,764 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:12:33,996 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:12:34,330 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:12:34,563 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:12:34,563 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:12:34,703 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:12:37,988 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:12:42,988 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 12:12:50,156 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+3229)
+2026-01-14 12:13:05,156 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:13:06,826 - Instance_0 - INFO - OCR (aviso_bloqueio): an
+2026-01-14 12:13:06,828 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 30s)
+2026-01-14 12:13:37,859 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:13:39,869 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_121337.png
+2026-01-14 12:13:39,872 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 20s)
+2026-01-14 12:14:00,638 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:14:02,540 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_121400.png
+2026-01-14 12:14:02,541 - Instance_0 - ERROR - ❌ Botão 'Visitante' não encontrado. Abortando.
+2026-01-14 12:17:46,308 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:17:46,777 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:17:50,704 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:17:56,185 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:17:56,839 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:17:57,225 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:17:57,227 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:17:57,421 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:18:00,861 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:18:05,862 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 12:18:13,402 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+4842)
+2026-01-14 12:18:33,403 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:18:36,341 - Instance_0 - INFO - OCR (aviso_bloqueio): 
+2026-01-14 12:18:36,342 - Instance_0 - INFO - 🔍 Verificando estado inicial de login...
+2026-01-14 12:18:36,343 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 12:18:52,151 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:18:54,157 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_121852.png
+2026-01-14 12:18:54,157 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 12:19:11,027 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:19:12,858 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_121911.png
+2026-01-14 12:19:12,860 - Instance_0 - WARNING - ⚠️ Botão 'Visitante' não detectado. Pode já estar logado ou em transição.
+2026-01-14 12:19:12,861 - Instance_0 - INFO - 🏁 Validando entrada no Lobby...
+2026-01-14 12:19:12,862 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 20s)
+2026-01-14 12:19:36,466 - Instance_0 - ERROR - [!] Falha: 'poker_brasil.png' não encontrado no tempo estipulado.
+2026-01-14 12:19:38,481 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_poker_brasil_20260114_121936.png
+2026-01-14 12:19:38,483 - Instance_0 - INFO - 🧹 Lobby não visto. Tentando limpar pop-ups residuais...
+2026-01-14 12:19:38,486 - Instance_0 - INFO - [*] Iniciando limpeza de UI na Instância 0...
+2026-01-14 12:19:38,487 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_x.png
+2026-01-14 12:19:38,490 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_red.png
+2026-01-14 12:19:38,492 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/recolher.png
+2026-01-14 12:19:38,493 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/entendi.png
+2026-01-14 12:19:38,494 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/cancelar.png
+2026-01-14 12:19:38,496 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 15s)
+2026-01-14 12:19:54,319 - Instance_0 - ERROR - [!] Falha: 'poker_brasil.png' não encontrado no tempo estipulado.
+2026-01-14 12:19:56,884 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_poker_brasil_20260114_121954.png
+2026-01-14 12:19:56,896 - Instance_0 - ERROR - ❌ Falha ao localizar o Lobby do jogo. Abortando.
+2026-01-14 12:23:17,596 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:23:17,941 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:23:23,207 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:23:28,544 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:23:28,916 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:23:29,257 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:23:29,259 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:23:29,438 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:23:32,831 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:23:37,832 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 12:23:45,591 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+6534)
+2026-01-14 12:24:05,591 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:24:08,510 - Instance_0 - INFO - OCR (aviso_bloqueio): & B
+2026-01-14 12:24:08,512 - Instance_0 - INFO - 🔍 Iniciando sequência de login...
+2026-01-14 12:24:08,515 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 12:24:24,885 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:24:27,795 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_122424.png
+2026-01-14 12:24:27,795 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 12:24:44,180 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:24:45,987 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_122444.png
+2026-01-14 12:24:45,991 - Instance_0 - WARNING - ⚠️ Visitante não encontrado. Tentando seguir para Roleta/Lobby.
+2026-01-14 12:24:45,992 - Instance_0 - INFO - 🎰 Aguardando Roleta de Bônus Diário...
+2026-01-14 12:24:45,993 - Instance_0 - INFO - [*] Aguardando visual de 'girar_roleta.png' (Limite: 25s)
+2026-01-14 12:24:45,995 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\girar_roleta.png
+2026-01-14 12:24:47,997 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\girar_roleta.png
+2026-01-14 12:24:49,998 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\girar_roleta.png
+2026-01-14 12:24:52,000 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\girar_roleta.png
+2026-01-14 12:24:54,002 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\girar_roleta.png
+2026-01-14 12:24:56,007 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\girar_roleta.png
+2026-01-14 12:24:58,019 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\girar_roleta.png
+2026-01-14 12:26:13,685 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:26:14,029 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:26:17,568 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:26:22,897 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:26:23,227 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:26:23,602 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:26:23,603 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:26:23,752 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:26:27,334 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:26:32,336 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 12:26:39,977 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+7541)
+2026-01-14 12:26:59,978 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:27:02,492 - Instance_0 - INFO - OCR (aviso_bloqueio): )
+2026-01-14 12:27:02,493 - Instance_0 - INFO - 🔍 Iniciando sequência de login...
+2026-01-14 12:27:02,494 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 12:27:18,003 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:27:19,940 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_122718.png
+2026-01-14 12:27:19,941 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 12:27:35,976 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:27:38,444 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_122735.png
+2026-01-14 12:27:38,446 - Instance_0 - WARNING - ⚠️ Visitante não encontrado. Tentando seguir para Roleta/Lobby.
+2026-01-14 12:27:38,446 - Instance_0 - INFO - 🎰 Aguardando Roleta de Bônus Diário...
+2026-01-14 12:27:38,447 - Instance_0 - INFO - [*] Aguardando visual de 'roleta_center.PNG' (Limite: 25s)
+2026-01-14 12:27:38,447 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:40,448 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:42,450 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:44,452 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:46,453 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:48,454 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:50,456 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:52,457 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:54,462 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:56,464 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:27:58,466 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:28:00,468 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:28:02,469 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\roleta_center.PNG
+2026-01-14 12:28:04,473 - Instance_0 - ERROR - [!] Falha: 'roleta_center.PNG' não encontrado no tempo estipulado.
+2026-01-14 12:28:06,563 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_roleta_center_20260114_122804.png
+2026-01-14 12:28:06,564 - Instance_0 - WARNING - ⚠️ Botão de girar não visto. O bônus pode já ter sido coletado.
+2026-01-14 12:28:06,569 - Instance_0 - INFO - 🏁 Validando acesso ao Lobby principal...
+2026-01-14 12:28:06,570 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 20s)
+2026-01-14 12:28:26,936 - Instance_0 - ERROR - Falha memuc ['adb', '-i', '0', 'pull', '/sdcard/screen_0.png', 'logs/screenshots\\screen_0.png']: 
+2026-01-14 12:28:58,119 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:28:58,469 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:29:02,205 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:29:28,067 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:29:28,405 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:29:31,850 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:29:37,121 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:29:37,451 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:29:37,797 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:29:37,797 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:29:37,951 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:29:41,263 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:29:46,264 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 12:29:53,582 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+8705)
+2026-01-14 12:30:13,583 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:30:16,127 - Instance_0 - INFO - OCR (aviso_bloqueio): | oS
+2026-01-14 12:30:16,130 - Instance_0 - INFO - 🔍 Iniciando sequência de login...
+2026-01-14 12:30:16,130 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 12:30:31,828 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:30:33,713 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_123031.png
+2026-01-14 12:30:33,714 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 12:30:50,431 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:30:52,385 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_123050.png
+2026-01-14 12:30:52,386 - Instance_0 - WARNING - ⚠️ Visitante não encontrado. Tentando seguir para Roleta/Lobby.
+2026-01-14 12:30:52,387 - Instance_0 - INFO - 🎰 Aguardando Roleta de Bônus Diário...
+2026-01-14 12:30:52,388 - Instance_0 - INFO - [*] Aguardando visual de 'roleta_center.PNG' (Limite: 25s)
+2026-01-14 12:31:20,352 - Instance_0 - ERROR - [!] Falha: 'roleta_center.PNG' não encontrado no tempo estipulado.
+2026-01-14 12:31:22,339 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_roleta_center_20260114_123120.png
+2026-01-14 12:31:22,340 - Instance_0 - WARNING - ⚠️ Botão de girar não visto. O bônus pode já ter sido coletado.
+2026-01-14 12:31:22,342 - Instance_0 - INFO - 🏁 Validando acesso ao Lobby principal...
+2026-01-14 12:31:22,345 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 20s)
+2026-01-14 12:31:43,524 - Instance_0 - ERROR - [!] Falha: 'poker_brasil.png' não encontrado no tempo estipulado.
+2026-01-14 12:31:45,633 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_poker_brasil_20260114_123143.png
+2026-01-14 12:31:45,635 - Instance_0 - INFO - 🧹 Lobby obstruído. Executando limpeza de interface...
+2026-01-14 12:31:45,636 - Instance_0 - INFO - [*] Iniciando limpeza de UI na Instância 0...
+2026-01-14 12:31:45,636 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_x.png
+2026-01-14 12:31:45,637 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_red.png
+2026-01-14 12:31:45,637 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/recolher.png
+2026-01-14 12:31:45,638 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/entendi.png
+2026-01-14 12:31:45,638 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/cancelar.png
+2026-01-14 12:31:45,639 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 15s)
+2026-01-14 12:32:02,881 - Instance_0 - ERROR - [!] Falha: 'poker_brasil.png' não encontrado no tempo estipulado.
+2026-01-14 12:32:05,167 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_poker_brasil_20260114_123202.png
+2026-01-14 12:32:05,168 - Instance_0 - ERROR - ❌ Falha crítica: Não conseguimos chegar ao Lobby.
+2026-01-14 12:34:52,264 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:34:52,619 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:34:58,075 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:35:03,425 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:35:03,897 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:35:04,273 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:35:04,273 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:35:04,435 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:35:07,589 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:35:12,590 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 12:35:19,940 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+10473)
+2026-01-14 12:35:39,942 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:35:42,545 - Instance_0 - INFO - OCR (aviso_bloqueio): 
+2026-01-14 12:35:42,546 - Instance_0 - INFO - 🔍 Iniciando sequência de login...
+2026-01-14 12:35:42,547 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 12:35:58,508 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:36:00,648 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_123558.png
+2026-01-14 12:36:00,650 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 12:36:17,120 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:36:19,023 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_123617.png
+2026-01-14 12:36:19,023 - Instance_0 - WARNING - ⚠️ Visitante não encontrado. Tentando seguir para Roleta/Lobby.
+2026-01-14 12:36:19,024 - Instance_0 - INFO - 🎰 Aguardando Roleta de Bônus Diário...
+2026-01-14 12:36:19,024 - Instance_0 - INFO - [*] Aguardando visual de 'roleta_center.PNG' (Limite: 25s)
+2026-01-14 12:36:21,120 - Instance_0 - INFO - Elemento 'roleta_center.PNG' localizado (Confiança: 1.00)
+2026-01-14 12:36:21,478 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:36:21,479 - Instance_0 - INFO - Executando TAP em (643, 365)
+2026-01-14 12:36:22,874 - Instance_0 - INFO - ✅ Roleta girada com sucesso!
+2026-01-14 12:36:34,881 - Instance_0 - INFO - [*] Iniciando limpeza de UI na Instância 0...
+2026-01-14 12:36:34,885 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_x.png
+2026-01-14 12:36:34,886 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_red.png
+2026-01-14 12:36:34,887 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/recolher.png
+2026-01-14 12:36:34,890 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/entendi.png
+2026-01-14 12:36:34,893 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/cancelar.png
+2026-01-14 12:36:34,895 - Instance_0 - INFO - 🏁 Validando acesso ao Lobby principal...
+2026-01-14 12:36:34,907 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 20s)
+2026-01-14 12:36:55,155 - Instance_0 - ERROR - [!] Falha: 'poker_brasil.png' não encontrado no tempo estipulado.
+2026-01-14 12:36:57,803 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_poker_brasil_20260114_123655.png
+2026-01-14 12:36:57,804 - Instance_0 - INFO - 🧹 Lobby obstruído. Executando limpeza de interface...
+2026-01-14 12:36:57,805 - Instance_0 - INFO - [*] Iniciando limpeza de UI na Instância 0...
+2026-01-14 12:36:57,805 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_x.png
+2026-01-14 12:36:57,807 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_red.png
+2026-01-14 12:36:57,807 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/recolher.png
+2026-01-14 12:36:57,808 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/entendi.png
+2026-01-14 12:36:57,809 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/cancelar.png
+2026-01-14 12:36:57,810 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 15s)
+2026-01-14 12:37:16,223 - Instance_0 - ERROR - [!] Falha: 'poker_brasil.png' não encontrado no tempo estipulado.
+2026-01-14 12:37:18,613 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_poker_brasil_20260114_123716.png
+2026-01-14 12:37:18,613 - Instance_0 - ERROR - ❌ Falha crítica: Não conseguimos chegar ao Lobby.
+2026-01-14 12:45:57,949 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:45:58,314 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:46:01,858 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:46:07,300 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:46:07,715 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:46:08,041 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:46:08,043 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:46:08,207 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:46:11,830 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:46:16,831 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 12:46:25,847 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+13251)
+2026-01-14 12:46:45,960 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:46:50,296 - Instance_0 - INFO - OCR (aviso_bloqueio): an
+2026-01-14 12:46:50,299 - Instance_0 - INFO - 🔍 Verificando interface de login...
+2026-01-14 12:46:50,310 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 12:47:05,405 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:47:07,631 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_124705.png
+2026-01-14 12:47:07,633 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 12:47:23,866 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:47:26,079 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_124723.png
+2026-01-14 12:47:26,080 - Instance_0 - WARNING - ⚠️ Botão Visitante não visto. Verificando fluxo de Roleta/Bônus.
+2026-01-14 12:47:26,080 - Instance_0 - INFO - 🎰 Aguardando Roleta de Bônus...
+2026-01-14 12:47:26,080 - Instance_0 - INFO - [*] Aguardando visual de 'roleta_center.PNG' (Limite: 25s)
+2026-01-14 12:47:52,430 - Instance_0 - ERROR - [!] Falha: 'roleta_center.PNG' não encontrado no tempo estipulado.
+2026-01-14 12:47:55,491 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_roleta_center_20260114_124752.png
+2026-01-14 12:47:55,492 - Instance_0 - WARNING - ⚠️ Roleta não detectada ou já coletada.
+2026-01-14 12:47:55,492 - Instance_0 - INFO - 🎁 Verificando popup 'Fortuna dos Iniciantes'...
+2026-01-14 12:47:55,493 - Instance_0 - INFO - [*] Aguardando visual de 'coletar_01.PNG' (Limite: 15s)
+2026-01-14 12:48:14,089 - Instance_0 - ERROR - [!] Falha: 'coletar_01.PNG' não encontrado no tempo estipulado.
+2026-01-14 12:48:16,551 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_coletar_01_20260114_124814.png
+2026-01-14 12:48:16,552 - Instance_0 - INFO - [*] Tela de coleta não detectada. Seguindo para o Lobby.
+2026-01-14 12:48:16,553 - Instance_0 - INFO - 🏁 Validando entrada no Lobby...
+2026-01-14 12:48:16,553 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 20s)
+2026-01-14 12:48:39,313 - Instance_0 - ERROR - [!] Falha: 'poker_brasil.png' não encontrado no tempo estipulado.
+2026-01-14 12:48:41,952 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_poker_brasil_20260114_124839.png
+2026-01-14 12:48:41,953 - Instance_0 - INFO - 🧹 Lobby não visível. Executando limpeza de interface...
+2026-01-14 12:48:41,954 - Instance_0 - INFO - [*] Iniciando limpeza de UI na Instância 0...
+2026-01-14 12:48:41,954 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_x.png
+2026-01-14 12:48:41,954 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_red.png
+2026-01-14 12:48:41,955 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/recolher.png
+2026-01-14 12:48:41,956 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/entendi.png
+2026-01-14 12:48:41,959 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/cancelar.png
+2026-01-14 12:48:41,960 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 15s)
+2026-01-14 12:48:59,414 - Instance_0 - ERROR - [!] Falha: 'poker_brasil.png' não encontrado no tempo estipulado.
+2026-01-14 12:49:01,998 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_poker_brasil_20260114_124859.png
+2026-01-14 12:49:01,998 - Instance_0 - ERROR - ❌ Falha: Não foi possível alcançar o Lobby.
+2026-01-14 12:54:49,686 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:54:50,059 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:54:53,770 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:54:59,119 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:54:59,441 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:54:59,770 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:54:59,771 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:54:59,923 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:55:03,492 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:55:08,493 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 12:55:16,716 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+15745)
+2026-01-14 12:55:36,719 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:55:39,974 - Instance_0 - INFO - OCR (aviso_bloqueio): i, we ¢
+2026-01-14 12:55:39,976 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 12:55:56,641 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 12:55:59,269 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_125556.png
+2026-01-14 12:55:59,269 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 12:56:17,258 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 12:56:19,301 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_125617.png
+2026-01-14 12:56:19,302 - Instance_0 - INFO - 🎰 Aguardando Roleta...
+2026-01-14 12:56:19,303 - Instance_0 - INFO - [*] Aguardando visual de 'roleta_center.PNG' (Limite: 25s)
+2026-01-14 12:56:46,169 - Instance_0 - ERROR - [!] Falha: 'roleta_center.PNG' não encontrado no tempo estipulado.
+2026-01-14 12:56:48,579 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_roleta_center_20260114_125646.png
+2026-01-14 12:56:48,579 - Instance_0 - INFO - 🎁 Verificando tela 'Fortuna dos Iniciantes'...
+2026-01-14 12:56:48,580 - Instance_0 - INFO - [*] Aguardando visual de 'coletar_01.PNG' (Limite: 15s)
+2026-01-14 12:57:06,109 - Instance_0 - ERROR - [!] Falha: 'coletar_01.PNG' não encontrado no tempo estipulado.
+2026-01-14 12:57:08,237 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_coletar_01_20260114_125706.png
+2026-01-14 12:57:08,239 - Instance_0 - INFO - 🏁 Confirmando presença no Lobby...
+2026-01-14 12:57:08,240 - Instance_0 - INFO - [*] Aguardando visual de 'jogar_ja.PNG' (Limite: 10s)
+2026-01-14 12:57:10,568 - Instance_0 - INFO - Elemento 'jogar_ja.PNG' localizado (Confiança: 0.96)
+2026-01-14 12:57:10,571 - Instance_0 - INFO - ✨ Lobby detectado com sucesso!
+2026-01-14 12:57:10,573 - Instance_0 - INFO - [*] Iniciando alteração de Nickname na Instância 0...
+2026-01-14 12:57:10,573 - Instance_0 - INFO - [*] Aguardando visual de 'profile/icone_perfil.png' (Limite: 15s)
+2026-01-14 12:57:10,575 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\profile/icone_perfil.png
+2026-01-14 12:57:12,577 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\profile/icone_perfil.png
+2026-01-14 12:57:14,582 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\profile/icone_perfil.png
+2026-01-14 12:57:16,583 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\profile/icone_perfil.png
+2026-01-14 12:57:18,585 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\profile/icone_perfil.png
+2026-01-14 12:57:20,587 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\profile/icone_perfil.png
+2026-01-14 12:57:22,589 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\profile/icone_perfil.png
+2026-01-14 12:57:24,591 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\profile/icone_perfil.png
+2026-01-14 12:57:26,592 - Instance_0 - ERROR - [!] Falha: 'profile/icone_perfil.png' não encontrado no tempo estipulado.
+2026-01-14 12:57:28,851 - Instance_0 - ERROR - FATAL: ADB Pull falhou. Verifique se a instância 0 tem espaço no /sdcard/.
+2026-01-14 12:57:29,050 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_profile/icone_perfil_20260114_125726.png
+2026-01-14 12:57:29,061 - Instance_0 - ERROR - [-] Não foi possível abrir o perfil.
+2026-01-14 12:57:29,076 - Instance_0 - INFO - 🎰 Iniciando Slots...
+2026-01-14 12:57:29,673 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:57:29,680 - Instance_0 - INFO - [*] Configurando Slot na Instância 0...
+2026-01-14 12:57:29,687 - Instance_0 - INFO - [*] Aguardando visual de 'slots/slot_9_linhas.png' (Limite: 15s)
+2026-01-14 12:57:29,688 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\slots/slot_9_linhas.png
+2026-01-14 12:57:31,699 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\slots/slot_9_linhas.png
+2026-01-14 12:57:33,701 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\slots/slot_9_linhas.png
+2026-01-14 12:57:35,703 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\slots/slot_9_linhas.png
+2026-01-14 12:57:37,705 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\slots/slot_9_linhas.png
+2026-01-14 12:57:39,707 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\slots/slot_9_linhas.png
+2026-01-14 12:57:41,709 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\slots/slot_9_linhas.png
+2026-01-14 12:57:48,789 - Instance_0 - ERROR - [!] Falha: 'slots/slot_9_linhas.png' não encontrado no tempo estipulado.
+2026-01-14 12:57:51,509 - Instance_0 - ERROR - FATAL: ADB Pull falhou. Verifique se a instância 0 tem espaço no /sdcard/.
+2026-01-14 12:57:51,711 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_slots/slot_9_linhas_20260114_125748.png
+2026-01-14 12:57:51,712 - Instance_0 - WARNING - [-] Não foi possível configurar 9 linhas (talvez já esteja padrão).
+2026-01-14 12:57:51,713 - Instance_0 - INFO - [*] Aguardando visual de 'slots/aposta_valor_2.png' (Limite: 10s)
+2026-01-14 12:58:05,441 - Instance_0 - ERROR - [!] Falha: 'slots/aposta_valor_2.png' não encontrado no tempo estipulado.
+2026-01-14 12:58:07,693 - Instance_0 - ERROR - FATAL: ADB Pull falhou. Verifique se a instância 0 tem espaço no /sdcard/.
+2026-01-14 12:58:07,872 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_slots/aposta_valor_2_20260114_125805.png
+2026-01-14 12:58:07,877 - Instance_0 - WARNING - [-] Valor de aposta 2 não encontrado.
+2026-01-14 12:58:07,878 - Instance_0 - INFO - [!] Iniciando ciclo de 10 minutos de giros...
+2026-01-14 12:58:10,211 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 12:58:22,214 - Instance_0 - INFO - [Slot] Progresso: 0/10 min.
+2026-01-14 12:58:24,288 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 12:58:33,289 - Instance_0 - INFO - [Slot] Progresso: 0/10 min.
+2026-01-14 12:58:36,233 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 12:58:55,014 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:58:55,345 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:58:58,900 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:59:04,233 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 12:59:04,589 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:59:04,970 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 12:59:04,970 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 12:59:05,138 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 12:59:08,456 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 12:59:13,460 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 12:59:20,725 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+17273)
+2026-01-14 12:59:40,731 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 12:59:44,213 - Instance_0 - INFO - OCR (aviso_bloqueio): 
+2026-01-14 12:59:44,218 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 13:00:01,057 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 13:00:03,421 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_130001.png
+2026-01-14 13:00:03,424 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 13:00:23,047 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 13:00:25,859 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_130023.png
+2026-01-14 13:00:25,861 - Instance_0 - INFO - 🎰 Aguardando Roleta...
+2026-01-14 13:00:25,862 - Instance_0 - INFO - [*] Aguardando visual de 'roleta_center.PNG' (Limite: 25s)
+2026-01-14 13:00:51,967 - Instance_0 - ERROR - [!] Falha: 'roleta_center.PNG' não encontrado no tempo estipulado.
+2026-01-14 13:00:53,901 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_roleta_center_20260114_130051.png
+2026-01-14 13:00:53,901 - Instance_0 - INFO - 🎁 Verificando tela 'Fortuna dos Iniciantes'...
+2026-01-14 13:00:53,902 - Instance_0 - INFO - [*] Aguardando visual de 'coletar_01.PNG' (Limite: 15s)
+2026-01-14 13:01:12,054 - Instance_0 - ERROR - [!] Falha: 'coletar_01.PNG' não encontrado no tempo estipulado.
+2026-01-14 13:01:14,795 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_coletar_01_20260114_130112.png
+2026-01-14 13:01:14,795 - Instance_0 - INFO - 🏁 Confirmando presença no Lobby...
+2026-01-14 13:01:14,796 - Instance_0 - INFO - [*] Aguardando visual de 'jogar_ja.PNG' (Limite: 10s)
+2026-01-14 13:01:17,614 - Instance_0 - INFO - Elemento 'jogar_ja.PNG' localizado (Confiança: 1.00)
+2026-01-14 13:01:17,616 - Instance_0 - INFO - ✨ Lobby detectado com sucesso!
+2026-01-14 13:01:17,617 - Instance_0 - INFO - [*] Iniciando alteração de Nickname na Instância 0...
+2026-01-14 13:01:17,618 - Instance_0 - INFO - [*] Aguardando visual de 'profile/icone_perfil.png' (Limite: 15s)
+2026-01-14 13:01:36,803 - Instance_0 - ERROR - [!] Falha: 'profile/icone_perfil.png' não encontrado no tempo estipulado.
+2026-01-14 13:01:38,626 - Instance_0 - ERROR - FATAL: ADB Pull falhou. Verifique se a instância 0 tem espaço no /sdcard/.
+2026-01-14 13:01:38,789 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_profile/icone_perfil_20260114_130136.png
+2026-01-14 13:01:38,791 - Instance_0 - ERROR - [-] Não foi possível abrir o perfil.
+2026-01-14 13:01:38,791 - Instance_0 - INFO - 🎰 Iniciando Slots...
+2026-01-14 13:01:39,100 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 13:01:39,102 - Instance_0 - INFO - [*] Configurando Slot na Instância 0...
+2026-01-14 13:01:39,102 - Instance_0 - INFO - [*] Aguardando visual de 'slots/slot_9_linhas.png' (Limite: 15s)
+2026-01-14 13:01:56,992 - Instance_0 - ERROR - [!] Falha: 'slots/slot_9_linhas.png' não encontrado no tempo estipulado.
+2026-01-14 13:01:59,183 - Instance_0 - ERROR - FATAL: ADB Pull falhou. Verifique se a instância 0 tem espaço no /sdcard/.
+2026-01-14 13:01:59,336 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_slots/slot_9_linhas_20260114_130156.png
+2026-01-14 13:01:59,337 - Instance_0 - WARNING - [-] Não foi possível configurar 9 linhas (talvez já esteja padrão).
+2026-01-14 13:01:59,337 - Instance_0 - INFO - [*] Aguardando visual de 'slots/aposta_valor_2.png' (Limite: 10s)
+2026-01-14 13:02:12,574 - Instance_0 - ERROR - [!] Falha: 'slots/aposta_valor_2.png' não encontrado no tempo estipulado.
+2026-01-14 13:02:14,554 - Instance_0 - ERROR - FATAL: ADB Pull falhou. Verifique se a instância 0 tem espaço no /sdcard/.
+2026-01-14 13:02:14,720 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_slots/aposta_valor_2_20260114_130212.png
+2026-01-14 13:02:14,722 - Instance_0 - WARNING - [-] Valor de aposta 2 não encontrado.
+2026-01-14 13:02:14,723 - Instance_0 - INFO - [!] Iniciando ciclo de 10 minutos de giros...
+2026-01-14 13:02:17,569 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:02:25,569 - Instance_0 - INFO - [Slot] Progresso: 0/10 min.
+2026-01-14 13:02:27,724 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:02:33,806 - Instance_0 - INFO - [Slot] Progresso: 0/10 min.
+2026-01-14 13:02:36,003 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:02:48,026 - Instance_0 - INFO - [Slot] Progresso: 0/10 min.
+2026-01-14 13:02:50,828 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:02:58,834 - Instance_0 - INFO - [Slot] Progresso: 0/10 min.
+2026-01-14 13:03:01,149 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:03:09,153 - Instance_0 - INFO - [Slot] Progresso: 0/10 min.
+2026-01-14 13:03:11,243 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:03:18,275 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:03:30,375 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:03:38,793 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:03:51,116 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:04:03,270 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:04:12,543 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:04:20,562 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 13:04:23,984 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:04:28,987 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 13:04:32,063 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:04:42,064 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 13:04:44,681 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:04:50,705 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 13:04:53,126 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:04:58,148 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 13:05:03,187 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:05:13,235 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 13:05:17,371 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:05:24,491 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:05:39,011 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:05:52,210 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:06:06,141 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:06:13,135 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:06:25,137 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 13:06:27,736 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:06:37,736 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 13:06:40,237 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:06:52,284 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 13:06:55,335 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:07:03,336 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 13:07:05,496 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png
+2026-01-14 13:07:12,497 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 13:07:14,775 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/fechar_ganho.png

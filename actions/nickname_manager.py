@@ -22,13 +22,13 @@ class NicknameManager:
         self.log.info(f"[*] Iniciando alteração de Nickname na Instância {self.instance_id}...")
 
         # 1. Clicar no Ícone de Perfil/Avatar
-        if not self.vision.wait_for_element("profile/icone_perfil.png", timeout=15, click_on_find=True):
+        if not self.vision.wait_for_element("profile/icone_perfil.PNG", timeout=15, click_on_find=True):
             self.log.error("[-] Não foi possível abrir o perfil.")
             return False
         time.sleep(2)
 
         # 2. Clicar no botão de Editar Nome
-        if not self.vision.wait_for_element("profile/btn_editar_nome.png", timeout=10, click_on_find=True):
+        if not self.vision.wait_for_element("profile/btn_editar_nome.PNG", timeout=10, click_on_find=True):
             self.log.warning("[-] Botão de editar nome não encontrado.")
             return False
 
@@ -37,7 +37,7 @@ class NicknameManager:
         self.log.info(f"[+] Novo nome gerado: {novo_nome}")
 
         # Clica no campo de input para focar o teclado
-        self.vision.find_element("profile/campo_input_nome.png", click=True)
+        self.vision.find_element("profile/campo_input_nome.PNG", click=True)
         time.sleep(1)
 
         # Comando ADB para apagar o nome antigo (vários backspaces) e digitar o novo
@@ -50,7 +50,7 @@ class NicknameManager:
         time.sleep(1)
 
         # 4. Confirmar alteração
-        if self.vision.find_element("profile/btn_confirmar_nome.png", click=True):
+        if self.vision.find_element("profile/btn_confirmar_nome.PNG", click=True):
             self.log.info(f"[✅] Nickname alterado com sucesso para: {novo_nome}")
             time.sleep(2)
             # Fecha a tela de perfil (usando o limpador de UI ou um clique no X)

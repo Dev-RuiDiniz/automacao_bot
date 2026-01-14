@@ -24,12 +24,12 @@ class SlotManager:
         self.log.info(f"[*] Configurando Slot na Instância {self.instance_id}...")
 
         # 1. Configurar 9 Linhas
-        if not self.vision.wait_for_element("slots/slot_9_linhas.png", timeout=15, click_on_find=True):
+        if not self.vision.wait_for_element("slots/slot_9_linhas.PNG", timeout=15, click_on_find=True):
             self.log.warning("[-] Não foi possível configurar 9 linhas (talvez já esteja padrão).")
 
         # 2. Configurar Aposta Valor 2
         # Clica repetidamente ou seleciona o valor 2
-        if not self.vision.wait_for_element("slots/aposta_valor_2.png", timeout=10, click_on_find=True):
+        if not self.vision.wait_for_element("slots/aposta_valor_2.PNG", timeout=10, click_on_find=True):
             self.log.warning("[-] Valor de aposta 2 não encontrado.")
 
         # 3. Iniciar Ciclo de Giros
@@ -39,10 +39,10 @@ class SlotManager:
 
         while time.time() < end_time:
             # Tenta clicar no botão de girar (ou manter pressionado para Auto Spin)
-            self.vision.find_element("slots/btn_girar_auto.png", threshold=0.7, click=True)
+            self.vision.find_element("slots/btn_girar_auto.PNG", threshold=0.7, click=True)
             
             # Anti-travamento: Fecha pop-ups de "Big Win" ou "Level Up"
-            self.vision.find_element("ui/fechar_ganho.png", threshold=0.7, click=True)
+            self.vision.find_element("ui/fechar_ganho.PNG", threshold=0.7, click=True)
             
             time.sleep(random.randint(5, 12)) # Intervalo entre giros para parecer humano
             
