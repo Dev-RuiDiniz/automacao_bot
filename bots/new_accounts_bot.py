@@ -10,6 +10,7 @@ from actions.maturation_manager import MaturationManager
 from actions.slot_manager import SlotManager
 from actions.nickname_manager import NicknameManager
 import time
+import os
 
 class NewAccountOrchestrator:
     """
@@ -33,8 +34,34 @@ class NewAccountOrchestrator:
 
         self.package = "com.playshoo.texaspoker.romania"
 
+    def _cleanup_environment(self):
+        """Limpa logs locais e imagens residuais no Android/PC antes de iniciar."""
+        self.log.info("🧹 [CLEANUP] Limpando erros e capturas anteriores...")
+        
+        # 1. Limpeza no Android via ADB (Imagens temporárias no sdcard)
+        try:
+            self.emu.run_command("shell rm -rf /sdcard/*.png")
+            self.emu.run_command("shell rm -rf /sdcard/Download/*.png")
+        except Exception as e:
+            self.log.warning(f"⚠️ Aviso: Falha ao limpar Android: {e}")
+
+        # 2. Limpeza no Windows (Pasta de logs de erro)
+        error_dir = os.path.join("logs", "errors")
+        if os.path.exists(error_dir):
+            try:
+                for file in os.listdir(error_dir):
+                    file_path = os.path.join(error_dir, file)
+                    if os.path.isfile(file_path):
+                        os.unlink(file_path)
+                self.log.info("✅ Pasta de erros local limpa.")
+            except Exception as e:
+                self.log.warning(f"⚠️ Aviso: Falha ao limpar pasta local: {e}")
+
     def run(self):
         self.log.info(f"🚀 [INÍCIO] Orquestrando Instância {self.emu.instance_id}")
+
+        # --- ETAPA PREVENTIVA: LIMPEZA ---
+        self._cleanup_environment()
 
         # --- ETAPA 0: PREPARAÇÃO ---
         if not self.emu.launch_instance():
@@ -60,25 +87,21 @@ class NewAccountOrchestrator:
 
         # --- ETAPA 3: ROLETA E BÔNUS INICIAL ---
         self.log.info("🎰 Aguardando Roleta...")
-        if self.vision.wait_for_element("roleta_center.PNG", timeout=25, click_on_find=True):
+        if self.vision.wait_for_element("roleta_center.PNG", timeout=20, click_on_find=True):
             time.sleep(12) 
             self.cleaner.clean_ui(iterations=1)
 
         # INTERAÇÃO COM "FORTUNA DOS INICIANTES"
         self.log.info("🎁 Verificando tela 'Fortuna dos Iniciantes'...")
-        # Usa a imagem 'coletar_01.PNG' enviada para confirmar a coleta
         if self.vision.wait_for_element("coletar_01.PNG", timeout=15, click_on_find=True):
             self.log.info("✅ Bônus diário coletado com sucesso.")
             time.sleep(5)
-            # Limpeza necessária para fechar a tela após coletar
             self.cleaner.clean_ui(iterations=2)
 
         # --- ETAPA 4: CONFIRMAÇÃO DO LOBBY ---
         self.log.info("🏁 Confirmando presença no Lobby...")
-        # Verificação múltipla para garantir que o lobby carregou
         lobby_confirmado = False
         for _ in range(3):
-            # Procura por elementos do lobby (imagem 'lobby.jpg' enviada)
             if self.vision.wait_for_element("jogar_ja.PNG", timeout=10) or \
                self.vision.wait_for_element("mesas.PNG", timeout=5):
                 lobby_confirmado = True
@@ -98,10 +121,9 @@ class NewAccountOrchestrator:
         self.slot.setup_and_run(duration_minutes=10)
         
         self.log.info("🃏 Transicionando para mesas de Poker...")
-        # Clica em 'MESAS' (ou Poker Brasil conforme asset anterior) para entrar
-        if self.vision.wait_for_element("mesas.png", timeout=20, click_on_find=True):
+        if self.vision.wait_for_element("mesas.PNG", timeout=20, click_on_find=True):
             time.sleep(10)
-            if self.vision.wait_for_element("jogar_agora.png", timeout=20, click_on_find=True):
+            if self.vision.wait_for_element("jogar_ja.PNG", timeout=20, click_on_find=True):
                 if self.maturation.stay_on_table(duration_minutes=10):
                     self.log.info("💾 Ciclo finalizado. Registrando conta...")
                     self.registry.register_account(nome_gerado, self.emu.instance_id)
