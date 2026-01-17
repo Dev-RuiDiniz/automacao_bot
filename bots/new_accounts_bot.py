@@ -118,18 +118,13 @@ class NewAccountOrchestrator:
         # --- ETAPA 5: MATURAÇÃO ---
         nome_gerado = self.nick.change_nickname()
         self.log.info("🎰 Iniciando Slots...")
-        self.slot.setup_and_run(duration_minutes=10)
+        if self.slot.setup_and_run(duration_minutes=20):
+            self.log.info("💾 Ciclo finalizado. Registrando conta...")
+            self.registry.register_account(nome_gerado, self.emu.instance_id)
+            self.emu.stop_app(self.package)
+            return "SUCCESS"
         
-        self.log.info("🃏 Transicionando para mesas de Poker...")
-        if self.vision.wait_for_element("mesas.PNG", timeout=20, click_on_find=True):
-            time.sleep(10)
-            if self.vision.wait_for_element("jogar_ja.PNG", timeout=20, click_on_find=True):
-                if self.maturation.stay_on_table(duration_minutes=10):
-                    self.log.info("💾 Ciclo finalizado. Registrando conta...")
-                    self.registry.register_account(nome_gerado, self.emu.instance_id)
-                    self.emu.stop_app(self.package)
-                    return "SUCCESS"
-
+            self.log.error("❌ Falha durante o ciclo de Slots.")
         return "FAILED"
 
 if __name__ == "__main__":
