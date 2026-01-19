@@ -3,7 +3,7 @@ project_name: "Sistema de Automacao de Emuladores Android"
 emulator:
   type: "MEmu"
   path: "D:\\Program Files\\Microvirt\\MEmu\\memuc.exe"
-  instances_limit: 9
+  instances_limit: 16
 
 logging:
   level: "INFO"
