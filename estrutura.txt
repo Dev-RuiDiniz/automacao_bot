@@ -1,5 +1,5 @@
 AUTOMACAO_BOT/
-├── main.py                     # Ponto de entrada principal do sistema (Dia 3). Gerencia o fluxo inicial.
+├── main.py                     # Ponto de entrada principal do sistema. Gerencia o fluxo inicial.
 ├── bot_navigation.py           # Lógica de navegação sequencial entre menus e telas do jogo.
 ├── requirements.txt            # Lista de bibliotecas Python necessárias (PyAutoGUI, OpenCV, etc).
 ├── .gitignore                  # Define arquivos e pastas que não devem ser enviados ao Git (ex: venv, __pycache__).
@@ -23,9 +23,7 @@ AUTOMACAO_BOT/
 │   └── 📂 ui/                  # Elementos gerais da interface (ícones de bônus, mesa ativa, roleta).
 │
 ├── 📂 bots/                    # Scripts orquestradores para diferentes comportamentos de conta.
-│   ├── collect_bot.py          # Bot focado apenas em coletar bônus em várias contas.
-│   ├── new_accounts_bot.py     # Orquestrador completo para criação e maturação de contas novas (Tarefa 10).
-│   └── rotate_accounts_bot.py  # Gerencia a troca (logoff/login) entre diferentes perfis.
+│   └──  new_accounts_bot.py     # Orquestrador completo para criação e maturação de contas novas (Tarefa 10).
 │
 ├── 📂 config/                  # Arquivos de configuração e bases de dados locais.
 │   ├── accounts.json           # Banco de dados das contas registradas (nickname, status, data).
