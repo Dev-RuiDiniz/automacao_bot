@@ -5,6 +5,10 @@ emulator:
   path: "D:\\Program Files\\Microvirt\\MEmu\\memuc.exe"
   instances_limit: 16
 
+slot_machine:
+  default_duration_minutes: 20
+  lines: 9
+
 logging:
   level: "INFO"
   save_to_file: true
