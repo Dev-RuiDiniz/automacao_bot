@@ -1275,3 +1275,176 @@
 2026-01-14 14:12:36,580 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
 2026-01-14 14:12:44,585 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
 2026-01-14 14:12:45,179 - Instance_0 - ERROR - Falha memuc ['adb', '-i', '0', 'shell', 'screencap', '-p', '/sdcard/screen_0.png']: 
+2026-01-14 18:35:29,279 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 18:35:31,184 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 18:36:23,132 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 18:36:59,957 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 18:37:00,340 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 18:37:04,754 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 18:37:10,042 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 18:37:11,067 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 18:37:11,432 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 18:37:11,757 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 18:37:11,758 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 18:37:11,758 - Instance_0 - INFO - 🧹 [CLEANUP] Limpando erros e capturas anteriores...
+2026-01-14 18:37:11,759 - Instance_0 - WARNING - ⚠️ Aviso: Falha ao limpar Android: 'EmulatorManager' object has no attribute 'run_command'
+2026-01-14 18:37:11,765 - Instance_0 - INFO - ✅ Pasta de erros local limpa.
+2026-01-14 18:37:11,915 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 18:37:15,629 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 18:37:20,632 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 18:37:28,610 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503)
+2026-01-14 18:37:48,612 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 18:37:52,199 - Instance_0 - INFO - OCR (aviso_bloqueio): an
+2026-01-14 18:37:52,201 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 18:38:08,259 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 18:38:09,358 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_183808.png
+2026-01-14 18:38:09,358 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 18:38:26,872 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 18:38:27,794 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_183826.png
+2026-01-14 18:38:27,794 - Instance_0 - INFO - 🎰 Aguardando Roleta...
+2026-01-14 18:38:27,795 - Instance_0 - INFO - [*] Aguardando visual de 'roleta_center.PNG' (Limite: 20s)
+2026-01-14 18:38:49,253 - Instance_0 - ERROR - [!] Falha: 'roleta_center.PNG' não encontrado no tempo estipulado.
+2026-01-14 18:38:50,667 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_roleta_center_20260114_183849.png
+2026-01-14 18:38:50,668 - Instance_0 - INFO - 🎁 Verificando tela 'Fortuna dos Iniciantes'...
+2026-01-14 18:38:50,668 - Instance_0 - INFO - [*] Aguardando visual de 'coletar_01.PNG' (Limite: 15s)
+2026-01-14 18:39:07,758 - Instance_0 - ERROR - [!] Falha: 'coletar_01.PNG' não encontrado no tempo estipulado.
+2026-01-14 18:39:08,152 - Instance_0 - ERROR - Falha memuc ['adb', '-i', '0', 'shell', 'screencap', '-p', '/sdcard/screen_0.png']: 
+2026-01-14 18:40:09,611 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 18:40:09,872 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 18:40:13,365 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 18:40:27,675 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 18:40:27,951 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 18:40:31,161 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 18:40:36,388 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-14 18:40:36,680 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 18:40:36,928 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 18:40:37,213 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 18:40:37,214 - Instance_0 - INFO - 🚀 [INÍCIO] Orquestrando Instância 0
+2026-01-14 18:40:37,214 - Instance_0 - INFO - 🧹 [CLEANUP] Limpando erros e capturas anteriores...
+2026-01-14 18:40:37,215 - Instance_0 - WARNING - ⚠️ Aviso: Falha ao limpar Android: 'EmulatorManager' object has no attribute 'run_command'
+2026-01-14 18:40:37,217 - Instance_0 - INFO - ✅ Pasta de erros local limpa.
+2026-01-14 18:40:37,401 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-14 18:40:40,861 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-14 18:40:45,863 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-14 18:40:53,136 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+4746)
+2026-01-14 18:41:13,138 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\popup_bloqueio.png
+2026-01-14 18:41:15,522 - Instance_0 - INFO - OCR (aviso_bloqueio): 
+2026-01-14 18:41:15,524 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 15s)
+2026-01-14 18:41:30,569 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-14 18:41:33,098 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260114_184130.png
+2026-01-14 18:41:33,100 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 15s)
+2026-01-14 18:41:51,464 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-14 18:41:53,814 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260114_184151.png
+2026-01-14 18:41:53,814 - Instance_0 - INFO - 🎰 Aguardando Roleta...
+2026-01-14 18:41:53,814 - Instance_0 - INFO - [*] Aguardando visual de 'roleta_center.PNG' (Limite: 20s)
+2026-01-14 18:42:17,484 - Instance_0 - ERROR - [!] Falha: 'roleta_center.PNG' não encontrado no tempo estipulado.
+2026-01-14 18:42:19,625 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_roleta_center_20260114_184217.png
+2026-01-14 18:42:19,626 - Instance_0 - INFO - 🎁 Verificando tela 'Fortuna dos Iniciantes'...
+2026-01-14 18:42:19,627 - Instance_0 - INFO - [*] Aguardando visual de 'coletar_01.PNG' (Limite: 15s)
+2026-01-14 18:42:37,958 - Instance_0 - ERROR - [!] Falha: 'coletar_01.PNG' não encontrado no tempo estipulado.
+2026-01-14 18:42:40,392 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_coletar_01_20260114_184237.png
+2026-01-14 18:42:40,393 - Instance_0 - INFO - 🏁 Confirmando presença no Lobby...
+2026-01-14 18:42:40,394 - Instance_0 - INFO - [*] Aguardando visual de 'jogar_ja.PNG' (Limite: 10s)
+2026-01-14 18:42:43,629 - Instance_0 - INFO - Elemento 'jogar_ja.PNG' localizado (Confiança: 0.99)
+2026-01-14 18:42:43,631 - Instance_0 - INFO - ✨ Lobby detectado com sucesso!
+2026-01-14 18:42:43,631 - Instance_0 - INFO - [*] Iniciando alteração de Nickname na Instância 0...
+2026-01-14 18:42:43,632 - Instance_0 - INFO - [*] Aguardando visual de 'icone_perfil.PNG' (Limite: 15s)
+2026-01-14 18:42:46,260 - Instance_0 - INFO - Elemento 'icone_perfil.PNG' localizado (Confiança: 1.00)
+2026-01-14 18:42:46,588 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 18:42:46,588 - Instance_0 - INFO - Executando TAP em (69, 57)
+2026-01-14 18:42:52,277 - Instance_0 - INFO - [*] Aguardando visual de 'btn_editar_nome.PNG' (Limite: 10s)
+2026-01-14 18:42:54,554 - Instance_0 - INFO - Elemento 'btn_editar_nome.PNG' localizado (Confiança: 0.90)
+2026-01-14 18:42:54,896 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 18:42:54,898 - Instance_0 - INFO - Executando TAP em (306, 71)
+2026-01-14 18:43:27,945 - Instance_0 - INFO - [+] Digitando novo nome: LuckXP666
+2026-01-14 18:43:34,295 - Instance_0 - INFO - [*] Aguardando visual de 'btn_confirmar_nome.PNG' (Limite: 8s)
+2026-01-14 18:43:44,788 - Instance_0 - ERROR - [!] Falha: 'btn_confirmar_nome.PNG' não encontrado no tempo estipulado.
+2026-01-14 18:43:46,584 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_btn_confirmar_nome_20260114_184344.png
+2026-01-14 18:43:50,417 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\confirma_nome_ok.PNG
+2026-01-14 18:43:52,535 - Instance_0 - INFO - Elemento 'menssagem_nome.PNG' localizado (Confiança: 1.00)
+2026-01-14 18:43:52,537 - Instance_0 - WARNING - [!] Erro: O sistema recusou a mudança (limite de 15 dias).
+2026-01-14 18:43:54,831 - Instance_0 - INFO - Elemento 'confirmar_popup_nome.PNG' localizado (Confiança: 1.00)
+2026-01-14 18:43:55,243 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-14 18:43:55,244 - Instance_0 - INFO - Executando TAP em (645, 453)
+2026-01-14 18:43:58,033 - Instance_0 - INFO - [*] Retornando ao Lobby...
+2026-01-14 18:43:58,034 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\encerra_nome.PNG
+2026-01-14 18:44:00,854 - Instance_0 - INFO - 🎰 Iniciando Slots...
+2026-01-14 18:44:00,855 - Instance_0 - INFO - [*] Configurando Slot na Instância 0...
+2026-01-14 18:44:00,855 - Instance_0 - INFO - [*] Aguardando visual de 'slot_9_linhas.PNG' (Limite: 15s)
+2026-01-14 18:44:18,962 - Instance_0 - ERROR - [!] Falha: 'slot_9_linhas.PNG' não encontrado no tempo estipulado.
+2026-01-14 18:44:21,285 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_slot_9_linhas_20260114_184418.png
+2026-01-14 18:44:21,286 - Instance_0 - WARNING - [-] Não foi possível configurar 9 linhas (talvez já esteja padrão).
+2026-01-14 18:44:21,287 - Instance_0 - INFO - [*] Aguardando visual de 'aposta_valor_2.PNG' (Limite: 10s)
+2026-01-14 18:44:31,364 - Instance_0 - ERROR - [!] Falha: 'aposta_valor_2.PNG' não encontrado no tempo estipulado.
+2026-01-14 18:44:33,854 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aposta_valor_2_20260114_184431.png
+2026-01-14 18:44:33,855 - Instance_0 - WARNING - [-] Valor de aposta 2 não encontrado.
+2026-01-14 18:44:33,855 - Instance_0 - INFO - [!] Iniciando ciclo de 10 minutos de giros...
+2026-01-14 18:44:36,198 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:44:45,486 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:44:55,124 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:45:06,584 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:45:17,831 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:45:28,489 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:45:40,832 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:45:54,354 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:46:07,556 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:46:17,578 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:46:27,975 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:46:33,977 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 18:46:36,917 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:46:41,918 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 18:46:44,236 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:46:50,237 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 18:46:52,765 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:47:02,766 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 18:47:06,816 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:47:14,818 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 18:47:18,851 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:47:25,853 - Instance_0 - INFO - [Slot] Progresso: 2/10 min.
+2026-01-14 18:47:31,254 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:47:42,889 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:47:56,044 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:48:08,411 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:48:16,538 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:48:26,545 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:48:35,546 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 18:48:37,947 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:48:47,949 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 18:48:51,036 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:49:00,043 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 18:49:02,388 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:49:09,389 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 18:49:11,688 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:49:19,692 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 18:49:23,912 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:49:31,983 - Instance_0 - INFO - [Slot] Progresso: 4/10 min.
+2026-01-14 18:49:34,727 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:49:43,926 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:49:56,468 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:50:05,606 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:50:15,401 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:50:28,086 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:50:38,091 - Instance_0 - INFO - [Slot] Progresso: 6/10 min.
+2026-01-14 18:50:41,754 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:50:47,756 - Instance_0 - INFO - [Slot] Progresso: 6/10 min.
+2026-01-14 18:50:50,738 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:50:55,741 - Instance_0 - INFO - [Slot] Progresso: 6/10 min.
+2026-01-14 18:50:58,619 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:51:08,620 - Instance_0 - INFO - [Slot] Progresso: 6/10 min.
+2026-01-14 18:51:11,598 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:51:16,602 - Instance_0 - INFO - [Slot] Progresso: 6/10 min.
+2026-01-14 18:51:20,083 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:51:28,092 - Instance_0 - INFO - [Slot] Progresso: 6/10 min.
+2026-01-14 18:51:32,612 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:51:44,503 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:51:56,803 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:52:04,020 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:52:12,203 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:52:20,342 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:52:27,718 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:52:34,721 - Instance_0 - INFO - [Slot] Progresso: 8/10 min.
+2026-01-14 18:52:37,063 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-14 18:52:44,080 - Instance_0 - INFO - [Slot] Progresso: 8/10 min.
+2026-01-14 18:52:45,008 - Instance_0 - ERROR - Falha memuc ['adb', '-i', '0', 'shell', 'screencap', '-p', '/sdcard/screen_0.png']: 
