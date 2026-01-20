@@ -14,8 +14,8 @@ import os
 
 class NewAccountOrchestrator:
     """
-    Orquestrador Master: Gerencia o ciclo de vida completo da conta.
-    Fluxo: Boot -> App -> Login -> Roleta -> Coleta Bônus -> Lobby -> Maturação.
+    Orquestrador Master: Unifica o Fluxo Operacional Completo em 5 Grandes Blocos.
+    Responsável por levar a conta da criação até a maturação completa (20 min).
     """
     def __init__(self, instance_id):
         self.emu = EmulatorManager(instance_id=instance_id)
@@ -34,99 +34,74 @@ class NewAccountOrchestrator:
 
         self.package = "com.playshoo.texaspoker.romania"
 
-    def _cleanup_environment(self):
-        """Limpa logs locais e imagens residuais no Android/PC antes de iniciar."""
-        self.log.info("🧹 [CLEANUP] Limpando erros e capturas anteriores...")
-        
-        # 1. Limpeza no Android via ADB (Imagens temporárias no sdcard)
-        try:
-            self.emu.run_command("shell rm -rf /sdcard/*.png")
-            self.emu.run_command("shell rm -rf /sdcard/Download/*.png")
-        except Exception as e:
-            self.log.warning(f"⚠️ Aviso: Falha ao limpar Android: {e}")
+    def run(self, watchdog_callback=None):
+        """
+        Execução unificada do Fluxo Operacional.
+        """
+        self.log.info(f"🚀 [BOT] Iniciando Fluxo Operacional - Instância {self.emu.instance_id}")
 
-        # 2. Limpeza no Windows (Pasta de logs de erro)
-        error_dir = os.path.join("logs", "errors")
-        if os.path.exists(error_dir):
-            try:
-                for file in os.listdir(error_dir):
-                    file_path = os.path.join(error_dir, file)
-                    if os.path.isfile(file_path):
-                        os.unlink(file_path)
-                self.log.info("✅ Pasta de erros local limpa.")
-            except Exception as e:
-                self.log.warning(f"⚠️ Aviso: Falha ao limpar pasta local: {e}")
-
-    def run(self):
-        self.log.info(f"🚀 [INÍCIO] Orquestrando Instância {self.emu.instance_id}")
-
-        # --- ETAPA PREVENTIVA: LIMPEZA ---
-        self._cleanup_environment()
-
-        # --- ETAPA 0: PREPARAÇÃO ---
+        # ======================================================================
+        # 1. PREPARAÇÃO DAS INSTÂNCIAS
+        # ======================================================================
+        # (Clonagem e Proxy são validados no main.py antes deste método)
         if not self.emu.launch_instance():
             self.log.error("❌ Erro ao ligar emulador.")
             return "FAILED"
 
+        # ======================================================================
+        # 2. INICIALIZAÇÃO DO JOGO
+        # ======================================================================
         self.emu.launch_app(self.package)
-        time.sleep(20) 
-
-        # --- ETAPA 1: SEGURANÇA ---
-        if self.block_handler.is_account_blocked():
-            self.log.critical(f"🚫 Bloqueio detectado na Instância {self.emu.instance_id}")
-            self.inst_manager.delete_instance(self.emu.instance_id)
-            return "RECYCLE"
-
-        # --- ETAPA 2: LOGIN ---
-        if self.vision.wait_for_element("aceitar.png", timeout=15, click_on_find=True):
-            time.sleep(3)
-
-        if self.vision.wait_for_element("visitante.png", timeout=15, click_on_find=True):
-            self.log.info("✅ Login como visitante iniciado.")
-            time.sleep(15) 
-
-        # --- ETAPA 3: ROLETA E BÔNUS INICIAL ---
-        self.log.info("🎰 Aguardando Roleta...")
-        if self.vision.wait_for_element("roleta_center.PNG", timeout=20, click_on_find=True):
+        
+        # Sequência de Login: Aceitar -> Visitante -> Poker Brasil -> Jogar
+        login_sequence = ["aceitar.png", "visitante.png", "poker_brasil.png", "jogar.png"]
+        for btn in login_sequence:
+            if self.vision.wait_for_element(btn, timeout=20, click_on_find=True):
+                self.log.info(f"[+] Botão {btn} clicado.")
+                time.sleep(3)
+        
+        # Roleta Inicial
+        if self.vision.wait_for_element("roleta_center.PNG", timeout=30, click_on_find=True):
+            self.log.info("[+] Girando roleta inicial.")
             time.sleep(12) 
-            self.cleaner.clean_ui(iterations=1)
 
-        # INTERAÇÃO COM "FORTUNA DOS INICIANTES"
-        self.log.info("🎁 Verificando tela 'Fortuna dos Iniciantes'...")
-        if self.vision.wait_for_element("coletar_01.PNG", timeout=15, click_on_find=True):
-            self.log.info("✅ Bônus diário coletado com sucesso.")
-            time.sleep(5)
-            self.cleaner.clean_ui(iterations=2)
+        # Limpeza de Promoções Pós-Roleta
+        self.cleaner.clean_ui(iterations=3)
 
-        # --- ETAPA 4: CONFIRMAÇÃO DO LOBBY ---
-        self.log.info("🏁 Confirmando presença no Lobby...")
-        lobby_confirmado = False
-        for _ in range(3):
-            if self.vision.wait_for_element("jogar_ja.PNG", timeout=10) or \
-               self.vision.wait_for_element("mesas.PNG", timeout=5):
-                lobby_confirmado = True
-                break
-            self.cleaner.clean_ui(iterations=1)
-            time.sleep(2)
+        # ======================================================================
+        # 3. ACESSO À MESA (QUICK EXIT)
+        # ======================================================================
+        # Entra em "Jogar Já", espera 10s e sai
+        if not self.maturation.quick_table_exit():
+            self.log.warning("[!] Falha no Quick Exit, tentando seguir fluxo...")
 
-        if not lobby_confirmado:
-            self.log.error("❌ Falha ao confirmar Lobby após roleta e bônus.")
-            return "FAILED"
-        
-        self.log.info("✨ Lobby detectado com sucesso!")
+        # Limpa promoções restantes após sair da mesa
+        self.cleaner.clean_ui(iterations=2)
 
-        # --- ETAPA 5: MATURAÇÃO ---
+        # ======================================================================
+        # 4. SLOT CLÁSSICO
+        # ======================================================================
+        # Troca o Nickname antes da maturação
         nome_gerado = self.nick.change_nickname()
-        self.log.info("🎰 Iniciando Slots...")
-        if self.slot.setup_and_run(duration_minutes=20):
-            self.log.info("💾 Ciclo finalizado. Registrando conta...")
-            self.registry.register_account(nome_gerado, self.emu.instance_id)
-            self.emu.stop_app(self.package)
-            return "SUCCESS"
         
-            self.log.error("❌ Falha durante o ciclo de Slots.")
-        return "FAILED"
+        self.log.info("🎰 Entrando no Slot Clássico...")
+        # Executa por 20 min com monitoramento de saldo e watchdog
+        slot_sucesso = self.slot.setup_and_run(watchdog_callback=watchdog_callback)
 
-if __name__ == "__main__":
-    orchestrator = NewAccountOrchestrator(instance_id=0)
-    orchestrator.run()
+        if not slot_sucesso:
+            self.log.error("❌ Ciclo de maturação interrompido (Saldo ou Erro).")
+            return "FAILED"
+
+        # ======================================================================
+        # 5. FINALIZAÇÃO
+        # ======================================================================
+        self.log.info("💾 Gravando estado final e encerrando...")
+        
+        # Marca como MATURADA_COMPLETA no banco de dados
+        self.registry.update_status(self.emu.instance_id, "MATURADA_COMPLETA")
+        
+        # Encerra o App e a Instância
+        self.emu.stop_app(self.package)
+        # self.emu.close_instance() # Opcional dependendo da gestão de lotes
+        
+        return "SUCCESS"
