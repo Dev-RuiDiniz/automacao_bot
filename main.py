@@ -12,17 +12,17 @@ from core.emulator_manager import EmulatorManager
 # ==============================================================================
 class FreezeWatchdog:
     """
-    Monitora se a tela da instância está estática por muito tempo.
+    Monitora se a tela da instância está estática por muito tempo comparando hashes.
     """
     def __init__(self, emu_manager, timeout_minutes=5):
         self.emu = emu_manager
         self.timeout_seconds = timeout_minutes * 60
         self.last_hash = None
         self.last_change_time = time.time()
-        self.package_name = "com.playshoo.texaspoker.romania" # Package atualizado
+        self.package_name = "com.playshoo.texaspoker.romania" 
 
     def check_and_recover(self):
-        """Verifica se a tela mudou ou se o app travou."""
+        """Verifica se a tela mudou ou se o app travou/congelou."""
         current_hash = self._get_screen_hash()
         
         if current_hash != self.last_hash:
@@ -39,9 +39,10 @@ class FreezeWatchdog:
         return True
 
     def _get_screen_hash(self):
-        """Gera hash MD5 do screenshot atual."""
+        """Gera hash MD5 utilizando o método take_screenshot do EmulatorManager."""
         temp_path = f"logs/freeze_check_{self.emu.instance_id}.png"
         try:
+            # Chama a função corrigida no emulator_manager.py
             self.emu.take_screenshot(temp_path)
             if os.path.exists(temp_path):
                 with open(temp_path, "rb") as f:
@@ -50,116 +51,128 @@ class FreezeWatchdog:
         return None
 
     def _force_restart_app(self):
-        """Reinicia o app via ADB."""
-        self.emu._execute_memuc(['adb', 'shell', 'am', 'force-stop', self.package_name])
+        """Força o fechamento e reabertura do app via comandos ADB protegidos."""
+        # Usa o executor do emu para garantir compatibilidade com caminhos de espaços
+        self.emu._execute_memuc(['adb', '-i', str(self.emu.instance_id), 'shell', 'am', 'force-stop', self.package_name])
         time.sleep(2)
-        self.emu._execute_memuc(['adb', 'shell', 'monkey', '-p', self.package_name, '1'])
+        self.emu._execute_memuc(['adb', '-i', str(self.emu.instance_id), 'shell', 'monkey', '-p', self.package_name, '1'])
 
 # ==============================================================================
-# GESTÃO DE EXECUÇÃO PARALELA (TESTE DE ESTRESSE)
+# FUNÇÕES DE GESTÃO E DIAGNÓSTICO
 # ==============================================================================
-def run_single_instance(instance_id, is_stress_test=False):
-    """
-    Executa o ciclo completo em uma instância específica.
-    is_stress_test: Se True, suprime inputs manuais para não travar a execução paralela.
-    """
-    print(f"\n[🚀] INICIANDO: Instância {instance_id}")
-    
-    # 1. Validar Rede e Proxy
-    if not check_instance_network(instance_id):
-        if not is_stress_test:
-            confirm = input("⚠️ Falha de rede. Continuar? (s/n): ")
-            if confirm.lower() != 's': return
-        else:
-            print(f"[❌] Instância {instance_id} abortada por falha de rede/proxy.")
-            return
 
-    # 2. Setup dos Componentes
-    emu = EmulatorManager(instance_id=instance_id)
-    watchdog = FreezeWatchdog(emu, timeout_minutes=5)
-    orchestrator = NewAccountOrchestrator(instance_id=instance_id)
+def list_all_instances():
+    """Lista instâncias usando o motor listv2 do EmulatorManager."""
+    print(f"\n{'-'*65}")
+    print(f"{'ID':<5} | {'NOME':<30} | {'STATUS':<15}")
+    print(f"{'-'*65}")
     
-    # 3. Execução do Fluxo de 15 Passos
-    # Passamos o watchdog para monitorar o Slot (20 min)
-    resultado = orchestrator.run(watchdog_callback=watchdog.check_and_recover)
+    emu_helper = EmulatorManager(instance_id=0)
+    instancias = emu_helper.list_instances() 
     
-    print(f"\n[🏁] RESULTADO INSTÂNCIA {instance_id}: {resultado}")
-
-def run_stress_test(instance_ids):
-    """
-    
-    Dispara múltiplas instâncias simultaneamente usando Threads.
-    """
-    threads = []
-    print(f"\n[🔥] INICIANDO TESTE DE ESTRESSE EM {len(instance_ids)} INSTÂNCIAS...")
-    
-    for idx in instance_ids:
-        t = threading.Thread(target=run_single_instance, args=(idx, True))
-        threads.append(t)
-        t.start()
-        time.sleep(5) # Delay entre boots para não sobrecarregar o CPU/Disco
-
-    for t in threads:
-        t.join() # Aguarda todas terminarem
-
-# ==============================================================================
-# FUNÇÕES AUXILIARES
-# ==============================================================================
-def setup_environment():
-    """Cria a estrutura de pastas necessária."""
-    folders = ['logs', 'database', 'assets/ui', 'assets/profile', 'assets/slots']
-    for folder in folders:
-        os.makedirs(folder, exist_ok=True)
+    if instancias:
+        for inst in instancias:
+            status = "🟢 Rodando" if inst['is_running'] else "⚪ Desligada"
+            print(f"{inst['index']:<5} | {inst['title']:<30} | {status:<15}")
+    else:
+        print("[-] Nenhuma instância encontrada ou falha no serviço MEmu.")
+    print(f"{'-'*65}\n")
 
 def check_instance_network(instance_id):
-    """Verifica IP e conectividade (ProxyManager)."""
+    """Verifica IP atribuído usando o executor do EmulatorManager."""
     emu = EmulatorManager(instance_id=instance_id)
+    print(f"[*] Verificando conectividade da Instância {instance_id}...")
+    
     if not emu.is_running():
-        emu.launch_instance()
+        print("[!] Instância desligada. Iniciando...")
+        if not emu.launch_instance():
+            return False
 
+    # Comando ADB direcionado para a instância específica
     cmd = ['adb', '-i', str(instance_id), 'shell', 'ip', 'addr', 'show', 'wlan0']
     output = emu._execute_memuc(cmd)
     
     if output and "inet " in output:
         ip = output.split("inet ")[1].split("/")[0]
-        print(f"[✅] Instância {instance_id} Online. IP: {ip}")
+        print(f"\n[✅] REDE OK - IP: {ip}")
         return True
+    
+    print(f"\n[❌] ERRO DE REDE - Sem IP válido.")
     return False
 
 # ==============================================================================
-# MENU PRINCIPAL
+# ORQUESTRAÇÃO E TESTES
 # ==============================================================================
+
+def run_single_instance(instance_id):
+    """Lança o bot completo. O orquestrador chamará get_screen_resolution."""
+    try:
+        orchestrator = NewAccountOrchestrator(instance_id=instance_id)
+        resultado = orchestrator.run()
+        print(f"\n[🏁] FINALIZADO: Instância {instance_id} retornou: {resultado}")
+    except Exception as e:
+        print(f"❌ Erro crítico na execução da instância {instance_id}: {e}")
+
+def run_stress_test(instance_ids):
+    """Dispara múltiplas instâncias em paralelo."""
+    threads = []
+    print(f"\n[🔥] INICIANDO ESTRESSE EM {len(instance_ids)} INSTÂNCIAS...")
+    for idx in instance_ids:
+        t = threading.Thread(target=run_single_instance, args=(idx,))
+        threads.append(t)
+        t.start()
+        time.sleep(8) # Aumentado para dar tempo ao MEmu processar os logs iniciais
+    for t in threads:
+        t.join()
+
+def setup_environment():
+    """Garante que todas as pastas de suporte existam."""
+    folders = ['logs', 'logs/errors', 'database', 'assets/ui', 'assets/profile', 'assets/slots']
+    for folder in folders:
+        os.makedirs(folder, exist_ok=True)
+
 def main():
-    setup_environment() #
-    
+    setup_environment()
     while True:
-        print("\n--- 🃏 PAINEL DE CONTROLE BOT POKER ---")
+        print("\n" + "="*40)
+        print("   🃏 PAINEL DE CONTROLE BOT POKER   ")
+        print("="*40)
         print("1. Rodar Workflow em 1 Instância")
-        print("2. TESTE DE ESTRESSE (4 Instâncias Simultâneas)")
+        print("2. TESTE DE ESTRESSE (Multi-Instâncias)")
         print("3. Clonar Nova Instância da Base (ID 0)")
-        print("4. Sair")
+        print("4. Testar Rede de uma Instância")
+        print("5. LISTAR TODAS AS INSTÂNCIAS")
+        print("6. Sair")
         
         opcao = input("\nSelecione: ")
 
         if opcao == "1":
             try:
-                idx = int(input("ID da Instância: "))
+                idx = int(input("Digite o ID da Instância: "))
                 run_single_instance(idx)
-            except ValueError: print("ID Inválido.")
+            except ValueError: print("❌ Erro: O ID deve ser um número.")
         
         elif opcao == "2":
-            # IDs das instâncias para o teste de estresse
-            ids_teste = [1, 2, 3, 4] 
-            run_stress_test(ids_teste)
+            run_stress_test([1, 2, 3, 4])
         
         elif opcao == "3":
             emu_base = EmulatorManager(instance_id=0)
             im = InstanceManager(emu_base)
-            novo_id = im.create_new_account_instance(base_id=0)
-            print(f"[+] Nova instância criada: {novo_id}")
+            im.create_new_account_instance(base_id=0)
 
-        elif opcao == "4": break
-        else: print("Opção inválida.")
+        elif opcao == "4":
+            try:
+                idx = int(input("Digite o ID da Instância para teste: "))
+                check_instance_network(idx)
+            except ValueError: print("❌ Erro: O ID deve ser um número.")
+
+        elif opcao == "5":
+            list_all_instances()
+
+        elif opcao == "6":
+            break
+        else:
+            print("⚠️ Opção inválida.")
 
 if __name__ == "__main__":
     try:

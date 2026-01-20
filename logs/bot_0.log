@@ -1448,3 +1448,122 @@
 2026-01-14 18:52:37,063 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
 2026-01-14 18:52:44,080 - Instance_0 - INFO - [Slot] Progresso: 8/10 min.
 2026-01-14 18:52:45,008 - Instance_0 - ERROR - Falha memuc ['adb', '-i', '0', 'shell', 'screencap', '-p', '/sdcard/screen_0.png']: 
+2026-01-20 12:27:10,450 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 12:27:12,126 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-20 12:28:12,438 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-20 12:28:18,064 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 12:28:18,066 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 12:28:18,496 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-20 12:28:18,711 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-20 12:28:19,003 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-20 12:28:19,005 - Instance_0 - INFO - 🚀 [BOT] Iniciando Fluxo Operacional - Instância 0
+2026-01-20 12:28:19,128 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-20 12:28:22,486 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-20 12:28:27,488 - Instance_0 - INFO - [*] Lançando aplicativo: com.playshoo.texaspoker.romania
+2026-01-20 12:28:38,363 - Instance_0 - INFO - ✅ App com.playshoo.texaspoker.romania carregando (PID: already connected to 127.0.0.1:21503
+
+1641)
+2026-01-20 12:28:38,364 - Instance_0 - INFO - [*] Aguardando visual de 'aceitar.png' (Limite: 20s)
+2026-01-20 12:29:29,247 - Instance_0 - ERROR - [!] Falha: 'aceitar.png' não encontrado no tempo estipulado.
+2026-01-20 12:29:30,172 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_aceitar_20260120_122929.png
+2026-01-20 12:29:30,172 - Instance_0 - INFO - [*] Aguardando visual de 'visitante.png' (Limite: 20s)
+2026-01-20 12:29:51,620 - Instance_0 - ERROR - [!] Falha: 'visitante.png' não encontrado no tempo estipulado.
+2026-01-20 12:29:52,494 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_visitante_20260120_122951.png
+2026-01-20 12:29:52,495 - Instance_0 - INFO - [*] Aguardando visual de 'poker_brasil.png' (Limite: 20s)
+2026-01-20 12:30:13,024 - Instance_0 - ERROR - [!] Falha: 'poker_brasil.png' não encontrado no tempo estipulado.
+2026-01-20 12:30:16,191 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_poker_brasil_20260120_123013.png
+2026-01-20 12:30:16,191 - Instance_0 - INFO - [*] Aguardando visual de 'jogar.png' (Limite: 20s)
+2026-01-20 12:30:16,191 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:18,192 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:20,193 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:22,195 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:24,196 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:26,198 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:28,198 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:30,199 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:32,200 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:34,201 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\jogar.png
+2026-01-20 12:30:36,202 - Instance_0 - ERROR - [!] Falha: 'jogar.png' não encontrado no tempo estipulado.
+2026-01-20 12:30:38,762 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_jogar_20260120_123036.png
+2026-01-20 12:30:38,763 - Instance_0 - INFO - [*] Aguardando visual de 'roleta_center.PNG' (Limite: 30s)
+2026-01-20 12:30:57,596 - Instance_0 - INFO - Elemento 'roleta_center.PNG' localizado (Confiança: 1.00)
+2026-01-20 12:30:57,882 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-20 12:30:57,883 - Instance_0 - INFO - Executando TAP em (643, 365)
+2026-01-20 12:30:59,339 - Instance_0 - INFO - [+] Girando roleta inicial.
+2026-01-20 12:31:11,340 - Instance_0 - INFO - [*] Iniciando limpeza de UI na Instância 0...
+2026-01-20 12:31:11,340 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/promo_roleta_close.png
+2026-01-20 12:31:11,341 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/promo_diaria.png
+2026-01-20 12:31:11,341 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/pacote_moedas_x.png
+2026-01-20 12:31:11,342 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_x.png
+2026-01-20 12:31:11,342 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_red.png
+2026-01-20 12:31:13,872 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/entendi.png
+2026-01-20 12:31:13,872 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/cancelar.png
+2026-01-20 12:31:14,175 - Instance_0 - INFO - ClickActions configurado: Escala base (1280, 720) -> Real 1280x720
+2026-01-20 12:31:14,176 - Instance_0 - INFO - [*] Executando Quick Table Exit na instância 0...
+2026-01-20 12:31:14,176 - Instance_0 - INFO - [*] Aguardando visual de 'btn_jogar_ja.png' (Limite: 15s)
+2026-01-20 12:31:14,177 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\btn_jogar_ja.png
+2026-01-20 12:31:16,178 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\btn_jogar_ja.png
+2026-01-20 12:31:18,178 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\btn_jogar_ja.png
+2026-01-20 12:31:20,180 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\btn_jogar_ja.png
+2026-01-20 12:31:22,182 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\btn_jogar_ja.png
+2026-01-20 12:31:24,182 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\btn_jogar_ja.png
+2026-01-20 12:31:26,184 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\btn_jogar_ja.png
+2026-01-20 12:31:28,185 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\btn_jogar_ja.png
+2026-01-20 12:31:30,185 - Instance_0 - ERROR - [!] Falha: 'btn_jogar_ja.png' não encontrado no tempo estipulado.
+2026-01-20 12:31:32,960 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_btn_jogar_ja_20260120_123130.png
+2026-01-20 12:31:32,960 - Instance_0 - ERROR - [-] Falha ao executar Quick Table Exit.
+2026-01-20 12:31:32,961 - Instance_0 - WARNING - [!] Falha no Quick Exit, tentando seguir fluxo...
+2026-01-20 12:31:32,961 - Instance_0 - INFO - [*] Iniciando limpeza de UI na Instância 0...
+2026-01-20 12:31:32,962 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/promo_roleta_close.png
+2026-01-20 12:31:32,962 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/promo_diaria.png
+2026-01-20 12:31:32,962 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/pacote_moedas_x.png
+2026-01-20 12:31:32,963 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_x.png
+2026-01-20 12:31:32,963 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/close_red.png
+2026-01-20 12:31:35,673 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/entendi.png
+2026-01-20 12:31:35,675 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\ui/cancelar.png
+2026-01-20 12:31:35,676 - Instance_0 - INFO - [*] Iniciando alteração de Nickname na Instância 0...
+2026-01-20 12:31:35,676 - Instance_0 - INFO - [*] Aguardando visual de 'icone_perfil.PNG' (Limite: 15s)
+2026-01-20 12:31:54,707 - Instance_0 - ERROR - [!] Falha: 'icone_perfil.PNG' não encontrado no tempo estipulado.
+2026-01-20 12:31:57,333 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_icone_perfil_20260120_123154.png
+2026-01-20 12:31:57,334 - Instance_0 - ERROR - [-] Não foi possível abrir o perfil.
+2026-01-20 12:31:57,335 - Instance_0 - INFO - 🎰 Entrando no Slot Clássico...
+2026-01-20 12:31:57,335 - Instance_0 - INFO - [*] Workflow Slot Iniciado - Instância 0
+2026-01-20 12:31:57,336 - Instance_0 - INFO - [*] Aguardando visual de 'slot_9_linhas.PNG' (Limite: 10s)
+2026-01-20 12:32:11,643 - Instance_0 - ERROR - [!] Falha: 'slot_9_linhas.PNG' não encontrado no tempo estipulado.
+2026-01-20 12:32:14,206 - Instance_0 - CRITICAL - 📸 Screenshot de erro gerado: logs/errors\ERR_0_slot_9_linhas_20260120_123211.png
+2026-01-20 12:32:14,207 - Instance_0 - ERROR - [-] Erro OCR: 'ImageRecognition' object has no attribute 'get_text_from_region'
+2026-01-20 12:32:17,151 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-20 12:32:24,795 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-20 12:32:32,875 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-20 12:32:41,573 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-20 12:32:49,260 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-20 12:32:56,170 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-20 12:33:07,242 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-20 12:33:16,526 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-20 12:33:28,778 - Instance_0 - WARNING - [!] Freeze detectado pelo Watchdog. Recuperando...
+2026-01-20 12:33:41,513 - Instance_0 - ERROR - Arquivo de template ausente: assets/buttons\fechar_ganho.PNG
+2026-01-20 13:16:08,430 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:17:38,516 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:27:31,554 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:29:21,711 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:35:32,820 - Instance_0 - INFO - EmulatorManager inicializado: D:\ProgramFiles\Microvirt\MEmu\memuc.exe
+2026-01-20 13:37:13,762 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program 5Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:37:13,777 - Instance_0 - ERROR - Executável não encontrado: D:\Program 5Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:37:16,483 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program 5Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:37:16,483 - Instance_0 - ERROR - Executável não encontrado: D:\Program 5Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:38:37,486 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:38:41,771 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:38:41,772 - Instance_0 - INFO - [*] Iniciando clonagem da Instância Base (ID: 0)...
+2026-01-20 13:42:08,109 - Instance_0 - INFO - [✅] Nova instância criada com ID: SUCCESS: clone vm finished.
+2026-01-20 13:42:11,180 - Instance_0 - ERROR - [-] Erro ao processar ID da nova instância: invalid literal for int() with base 10: 'SUCCESS: clone vm finished.'
+2026-01-20 13:42:24,240 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:50:41,696 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:50:49,199 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 13:50:49,445 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-20 13:51:28,944 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-20 14:01:26,790 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 14:01:27,064 - Instance_0 - INFO - [*] Iniciando Instância 0 (Aguardando Boot)...
+2026-01-20 14:02:18,614 - Instance_0 - INFO - ✅ Instância 0 pronta!
+2026-01-20 14:02:26,319 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 14:03:43,966 - Instance_0 - INFO - EmulatorManager inicializado: D:\Program Files\Microvirt\MEmu\memuc.exe
+2026-01-20 14:03:44,108 - Instance_0 - INFO - Aviso: listv2 retornou vazio. Tentando comando list clássico...
