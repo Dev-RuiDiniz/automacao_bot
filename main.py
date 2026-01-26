@@ -3,7 +3,7 @@ import os
 import time
 import hashlib
 import threading
-from bots.new_accounts_bot import NewAccountOrchestrator
+from bots.bot_conta_nova import NewAccountOrchestrator
 from core.instance_manager import InstanceManager
 from core.emulator_manager import EmulatorManager
 
