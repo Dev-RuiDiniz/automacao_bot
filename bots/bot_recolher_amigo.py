@@ -50,32 +50,59 @@ class BotOrquestradorMestre:
                 time.sleep(2)
 
             # 5. ROLETAS PRINCIPAIS
-            if self.vision.wait_for_element("roleta/botao_roleta.png", timeout=10, click_on_find=True):
+            if self.vision.wait_for_element("10_jogar_roleta.PNG", timeout=10, click_on_find=True):
                 for giro in range(2): # 5.2 Execução de 2 giros
-                    self.log.info(f"🎡 Giro de roleta {giro + 1}/2")
-                    self.vision.wait_for_element("roleta/botao_girar.png", timeout=10, click_on_find=True)
+                    self.log.info(f"Giro de roleta {giro + 1}/2")
+                    self.vision.wait_for_element("12_rolar_roleta.PNG", timeout=10, click_on_find=True)
                     time.sleep(8) # Aguarda resultado
-                self.vision.wait_for_element("roleta/botao_sair_roleta.png", timeout=10, click_on_find=True) #
+                self.vision.wait_for_element("12_sair_roleta.PNG", timeout=10, click_on_find=True) #
 
-            # 6. NOKO BOX
-            if self.vision.wait_for_element(f"{self.img_path}botao_noko_box.png", timeout=10, click_on_find=True):
-                if not self.vision.exists(f"{self.img_path}noko_vazia.png"): #
-                    self.log.info("📦 Abrindo Noko Box.")
-                    self.click.click_at_element(f"{self.img_path}tela_noko_box.png") # Executa abertura
-                self.vision.wait_for_element(f"{self.img_path}botao_sair_noko.png", timeout=10, click_on_find=True) #
+            # ======================================================================
+            # 6. NOKO BOX (REVISADO: ALTERNÂNCIA DE ABA/APP)
+            # ======================================================================
+            self.log.info("Iniciando transição para Módulo Noko Box...")
+
+            # Segundo o fluxo, o bot deve acessar a Noko Box. 
+            # Para garantir que estamos na "Página Inicial" do emulador/app:
+            self.emu.shell("input keyevent 3") # Comando ADB para pressionar HOME (Página Inicial do MEmu)
+            time.sleep(2)
+
+            # Localiza e abre o ícone do Nekobox na tela inicial do emulador
+            if self.vision.wait_for_element(f"{self.img_path}icone_nekobox.png", timeout=15, click_on_find=True):
+                self.log.info("[+] Aplicativo Nekobox aberto.")
+                
+                # Aguarda a tela interna do Nekobox carregar [cite: 41, 42]
+                if self.vision.wait_for_element(f"{self.img_path}tela_noko_box.png", timeout=15):
+                    
+                    # Verifica se a Noko Box contém itens (não está vazia) [cite: 43]
+                    if not self.vision.exists(f"{self.img_path}noko_vazia.png"):
+                        self.log.info("[+] Itens detectados! Realizando abertura da Noko Box.")
+                        # Executa o clique de abertura conforme a posição da tela validada [cite: 43]
+                        self.click.click_at_element(f"{self.img_path}tela_noko_box.png")
+                        time.sleep(5) # Aguarda animação de abertura
+                    else:
+                        self.log.info("[-] Noko Box identificada como vazia. Pulando coleta.")
+
+                    # Sai do módulo Noko Box para retornar ao fluxo principal 
+                    if self.vision.wait_for_element(f"{self.img_path}botao_sair_noko.png", timeout=10, click_on_find=True):
+                        self.log.info("[+] Saindo do Nekobox e retornando à Home do jogo.")
+                        # Confirma retorno à tela inicial do jogo para o próximo módulo 
+                        self.vision.wait_for_element("home/tela_home.png", timeout=15)
+            else:
+                self.log.error("❌ Falha ao localizar o ícone do Nekobox na Página Inicial.")
 
             # 7. CONEXÃO VPN (ETAPA CRÍTICA)
             if self.vision.exists("vpn/vpn_desconectada.png"):
                 self.vision.wait_for_element("vpn/botao_conectar_vpn.png", click_on_find=True)
                 if not self.vision.wait_for_element("vpn/vpn_conectada.png", timeout=30):
-                    self.log.error("❌ FALHA CRÍTICA: VPN não conectou.")
+                    self.log.error("FALHA CRÍTICA: VPN não conectou.")
                     return "FAILED_CRITICAL"
 
             # 8. ABERTURA DO CHROME E ACESSO AO BÔNUS
             os.system("am start -n com.android.chrome/com.google.android.apps.chrome.Main")
             time.sleep(5)
             if self.vision.exists("chrome/captcha_detectado.png"):
-                self.log.error("❌ Captcha detectado no Chrome. Encerrando instância.")
+                self.log.error("Captcha detectado no Chrome. Encerrando instância.")
                 return "FAILED_CAPTCHA"
 
             # 9. COLETA DO BÔNUS NO JOGO
@@ -100,9 +127,10 @@ class BotOrquestradorMestre:
                 break
             
             recolheu = self.vision.wait_for_element(f"{self.img_path}botao_recolher_presente.png", timeout=2, click_on_find=True)
-            enviou = self.vision.wait_for_element(f"{self.img_path}botao_enviar_presente.png", timeout=2, click_on_find=True)
+            enviou_01 = self.vision.wait_for_element(f"{self.img_path}botao_enviar_presente.png", timeout=2, click_on_find=True)
+            enviou_02 = self.vision.wait_for_element(f"{self.img_path}botao_enviar_presente_2.png", timeout=2, click_on_find=True)
             
-            if not recolheu and not enviou:
+            if not recolheu and not enviou_01 and not enviou_02:
                 break
             time.sleep(1)
 
